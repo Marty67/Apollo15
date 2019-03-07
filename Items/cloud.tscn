@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Items/cloud.shader" type="Shader" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="icon" type="Sprite" parent="." index="0"]
+
+material = SubResource( 1 )
+position = Vector2( 905, 630 )
+scale = Vector2( 11.4062, 10.625 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material" ]
+
+

@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/FluxCapacitor.gd" type="Script" id=1]
+[ext_resource path="res://particles/outline.shader" type="Shader" id=2]
+[ext_resource path="res://Images/Flux Capacitor with shadows.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Label.tscn" type="PackedScene" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 2 )
+shader_param/radius = 0.5
+shader_param/modulate = null
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 12.2649 )
+
+[node name="Area2D" type="Area2D" index="0"]
+
+position = Vector2( 487.345, 395.786 )
+scale = Vector2( 7.22876, 7.98556 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flux Capacitor with shadows" type="Sprite" parent="." index="0"]
+
+material = SubResource( 1 )
+position = Vector2( 6.0051, 8.35463 )
+scale = Vector2( 0.19147, 0.237412 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( 5.89169, 7.28431 )
+scale = Vector2( 0.728686, 0.866762 )
+shape = SubResource( 2 )
+
+[node name="Label" parent="." index="2" instance=ExtResource( 4 )]
+
+visible = false
+margin_left = 2.0
+margin_top = -16.0
+margin_right = 10.0
+margin_bottom = -2.0
+
+
