@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Map/Assets/Tiles/BackgroundTile1.tres" type="TileSet" id=1]
+[ext_resource path="res://Map/Assets/Tiles/MVP/BackgroundTile1.tres" type="TileSet" id=1]
 [ext_resource path="res://Map/Assets/Background/Cave/Top.png" type="Texture" id=2]
-[ext_resource path="res://Map/Assets/Tiles/AssetTile1.tres" type="TileSet" id=3]
+[ext_resource path="res://Map/Assets/Tiles/Something/AssetTile1.tres" type="TileSet" id=3]
+
+
 
 [node name="Node2D" type="Node2D" index="0"]
 

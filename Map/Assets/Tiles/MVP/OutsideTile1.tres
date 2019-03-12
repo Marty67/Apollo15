@@ -1,0 +1,396 @@
+[gd_resource type="TileSet" load_steps=36 format=2]
+
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor - Big Tree.png" type="Texture" id=1]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor - Grass.png" type="Texture" id=2]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-InnerBorder-Bottom.png" type="Texture" id=3]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-1x1.png" type="Texture" id=4]
+[ext_resource path="res://Map/Assets/Background/zeus/water/Water-InnerBorder-left.png" type="Texture" id=5]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-InnerBorder-TopLeft.png" type="Texture" id=6]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-InnerBorder-Top.png" type="Texture" id=7]
+[ext_resource path="res://Map/Assets/Background/zeus/water/bot-edge.png" type="Texture" id=8]
+[ext_resource path="res://Map/Assets/Background/zeus/groundTiles.png" type="Texture" id=9]
+[ext_resource path="res://Map/Assets/Background/zeus/Ice Bridge 1.png" type="Texture" id=10]
+[ext_resource path="res://Map/Assets/Background/Poseidon/bridge-bot.png" type="Texture" id=11]
+[ext_resource path="res://Map/Assets/Background/Poseidon/bridge-top.png" type="Texture" id=12]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor - Pebbles.png" type="Texture" id=13]
+[ext_resource path="res://Map/Assets/Background/Poseidon/bridge-mid.png" type="Texture" id=14]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Alien hut.png" type="Texture" id=15]
+[ext_resource path="res://Map/Assets/Background/Poseidon/PixelMeteor3.png" type="Texture" id=16]
+[ext_resource path="res://Map/Assets/Background/zeus/water/top-edge.png" type="Texture" id=17]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor - Small Tree.png" type="Texture" id=18]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor- Flower1.png" type="Texture" id=19]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor- Flower2.png" type="Texture" id=20]
+[ext_resource path="res://Map/Assets/Background/zeus/water/Blue Floor- Pond.png" type="Texture" id=21]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor- Tufts.png" type="Texture" id=22]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor.png" type="Texture" id=23]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-InnerBorder-BottomLeft.png" type="Texture" id=24]
+
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 6.01089 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.45142, 16 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.73627, 7.94974 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 6.64435 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 48, 30.0877 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.51068, 6.86185 )
+
+[resource]
+
+0/name = "Blue Floor - Big Tree"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 64 )
+0/is_autotile = false
+0/occluder_offset = Vector2( 16, 32 )
+0/navigation_offset = Vector2( 16, 32 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 32 )
+} ]
+1/name = "Blue Floor - Grass"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/is_autotile = false
+1/occluder_offset = Vector2( 16, 16 )
+1/navigation_offset = Vector2( 16, 16 )
+1/shapes = [  ]
+2/name = "Blue Floor - Pebbles"
+2/texture = ExtResource( 13 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/is_autotile = false
+2/occluder_offset = Vector2( 16, 16 )
+2/navigation_offset = Vector2( 16, 16 )
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+3/name = "Blue Floor - Small Tree"
+3/texture = ExtResource( 18 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/is_autotile = false
+3/occluder_offset = Vector2( 16, 16 )
+3/navigation_offset = Vector2( 16, 16 )
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+4/name = "Blue Floor- Flower1"
+4/texture = ExtResource( 19 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/is_autotile = false
+4/occluder_offset = Vector2( 16, 16 )
+4/navigation_offset = Vector2( 16, 16 )
+4/shapes = [  ]
+5/name = "Blue Floor- Flower2"
+5/texture = ExtResource( 20 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 32 )
+5/is_autotile = false
+5/occluder_offset = Vector2( 16, 16 )
+5/navigation_offset = Vector2( 16, 16 )
+5/shapes = [  ]
+6/name = "Blue Floor- Pond"
+6/texture = ExtResource( 21 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 96, 64 )
+6/is_autotile = false
+6/occluder_offset = Vector2( 48, 32 )
+6/navigation_offset = Vector2( 48, 32 )
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 48, 32 )
+} ]
+7/name = "Blue Floor- Tufts"
+7/texture = ExtResource( 22 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 32 )
+7/is_autotile = false
+7/occluder_offset = Vector2( 16, 16 )
+7/navigation_offset = Vector2( 16, 16 )
+7/shapes = [  ]
+8/name = "Blue Floor"
+8/texture = ExtResource( 23 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 32, 32 )
+8/is_autotile = false
+8/occluder_offset = Vector2( 16, 16 )
+8/navigation_offset = Vector2( 16, 16 )
+8/shapes = [  ]
+9/name = "cornerWater"
+9/texture = ExtResource( 24 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 32, 32 )
+9/is_autotile = false
+9/occluder_offset = Vector2( 16, 16 )
+9/navigation_offset = Vector2( 16, 16 )
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 0.647836, 0, 0, 0.637899, 28.2036, 3.2656 )
+} ]
+10/name = "sideWater"
+10/texture = ExtResource( 3 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 32, 32 )
+10/is_autotile = false
+10/occluder_offset = Vector2( 16, 16 )
+10/navigation_offset = Vector2( 16, 16 )
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 6 )
+} ]
+11/name = "midwater"
+11/texture = ExtResource( 4 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 32, 32 )
+11/is_autotile = false
+11/occluder_offset = Vector2( 16, 16 )
+11/navigation_offset = Vector2( 16, 16 )
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+12/name = "leftWater"
+12/texture = ExtResource( 5 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 32, 32 )
+12/is_autotile = false
+12/occluder_offset = Vector2( 16, 16 )
+12/navigation_offset = Vector2( 16, 16 )
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 26.3611, 16.0314 )
+} ]
+13/name = "cornerTopWater"
+13/texture = ExtResource( 6 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 32, 32 )
+13/is_autotile = false
+13/occluder_offset = Vector2( 16, 16 )
+13/navigation_offset = Vector2( 16, 16 )
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 0.582619, 0, 0, 0.643202, 28.3624, 28.1388 )
+} ]
+14/name = "topSideWater"
+14/texture = ExtResource( 7 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 32, 32 )
+14/is_autotile = false
+14/occluder_offset = Vector2( 16, 16 )
+14/navigation_offset = Vector2( 16, 16 )
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 25.4304 )
+} ]
+15/name = "watercorner"
+15/texture = ExtResource( 8 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 32, 32 )
+15/is_autotile = false
+15/occluder_offset = Vector2( 16, 16 )
+15/navigation_offset = Vector2( 16, 16 )
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+16/name = "groundTiles"
+16/texture = ExtResource( 9 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 96, 96 )
+16/is_autotile = true
+16/autotile/bitmask_mode = 0
+16/autotile/icon_coordinate = Vector2( 0, 0 )
+16/autotile/tile_size = Vector2( 32, 32 )
+16/autotile/spacing = 0
+16/autotile/bitmask_flags = [ Vector2( 0, 1 ), 325, Vector2( 1, 0 ), 325, Vector2( 1, 1 ), 325, Vector2( 1, 2 ), 325, Vector2( 2, 1 ), 325, Vector2( 3, 1 ), 64 ]
+16/autotile/occluder_map = [  ]
+16/autotile/navpoly_map = [  ]
+16/autotile/priority_map = [ Vector3( 1, 1, 80 ) ]
+16/occluder_offset = Vector2( 48, 48 )
+16/navigation_offset = Vector2( 48, 48 )
+16/shapes = [  ]
+17/name = "Ice Bridge 1"
+17/texture = ExtResource( 10 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 100, 102 )
+17/is_autotile = false
+17/occluder_offset = Vector2( 50, 51 )
+17/navigation_offset = Vector2( 50, 51 )
+17/shapes = [  ]
+18/name = "bridge-bot"
+18/texture = ExtResource( 11 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 32, 32 )
+18/is_autotile = false
+18/occluder_offset = Vector2( 16, 16 )
+18/navigation_offset = Vector2( 16, 16 )
+18/shapes = [  ]
+19/name = "bridge-top"
+19/texture = ExtResource( 12 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 32, 32 )
+19/is_autotile = false
+19/occluder_offset = Vector2( 16, 16 )
+19/navigation_offset = Vector2( 16, 16 )
+19/shapes = [  ]
+20/name = "bridge-mid"
+20/texture = ExtResource( 14 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 32, 32 )
+20/is_autotile = false
+20/occluder_offset = Vector2( 16, 16 )
+20/navigation_offset = Vector2( 16, 16 )
+20/shapes = [  ]
+21/name = "Alien hut"
+21/texture = ExtResource( 15 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 320, 133 )
+21/is_autotile = false
+21/occluder_offset = Vector2( 160, 66.5 )
+21/navigation_offset = Vector2( 160, 66.5 )
+21/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 3.33333, 0, 0, 2.23648, 160, 66.5 )
+} ]
+22/name = "rock-1"
+22/texture = ExtResource( 16 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 175, 15, 128, 96 )
+22/is_autotile = false
+22/occluder_offset = Vector2( 64, 48 )
+22/navigation_offset = Vector2( 64, 48 )
+22/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1.28431, 0, 0, 1.67736, 67.2421, 47.5 )
+} ]
+23/name = "rock-2"
+23/texture = ExtResource( 16 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 15, 15, 128, 96 )
+23/is_autotile = false
+23/occluder_offset = Vector2( 64, 48 )
+23/navigation_offset = Vector2( 64, 48 )
+23/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1.10784, 0, 0, 1.61725, 56.2421, 49.4889 )
+} ]
+24/name = "corer-top"
+24/texture = ExtResource( 17 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 32, 32 )
+24/is_autotile = false
+24/occluder_offset = Vector2( 16, 16 )
+24/navigation_offset = Vector2( 16, 16 )
+24/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+

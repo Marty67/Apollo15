@@ -1,0 +1,484 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor - Big Tree.png" type="Texture" id=1]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor - Pebbles.png" type="Texture" id=2]
+[ext_resource path="res://Map/Assets/Background/zeus/Blue Floor - Small Tree.png" type="Texture" id=3]
+[ext_resource path="res://Map/Assets/Background/zeus/water/Blue Floor- Pond.png" type="Texture" id=4]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Alien hut.png" type="Texture" id=5]
+[ext_resource path="res://Map/Assets/Background/Poseidon/PixelMeteor3.png" type="Texture" id=6]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-InnerBorder-BottomLeft.png" type="Texture" id=7]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-InnerBorder-Bottom.png" type="Texture" id=8]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-1x1.png" type="Texture" id=9]
+[ext_resource path="res://Map/Assets/Background/zeus/water/Water-InnerBorder-left.png" type="Texture" id=10]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-InnerBorder-TopLeft.png" type="Texture" id=11]
+[ext_resource path="res://Map/Assets/Background/Poseidon/Water/Land-Border/Water-InnerBorder-Top.png" type="Texture" id=12]
+[ext_resource path="res://Map/Assets/Background/zeus/water/bot-edge.png" type="Texture" id=13]
+[ext_resource path="res://Map/Assets/Background/zeus/water/top-edge.png" type="Texture" id=14]
+
+
+
+
+
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 48, 30.0877 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.51068, 6.86185 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 6.01089 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.45142, 16 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.73627, 7.94974 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 6.64435 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Blue Floor - Big Tree" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 538.258, 299 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Blue Floor - Big Tree" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue Floor - Big Tree/StaticBody2D" index="0"]
+
+visible = false
+shape = SubResource( 1 )
+
+[node name="Blue Floor - Pebbles" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 538.258, 299 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Blue Floor - Pebbles" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue Floor - Pebbles/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="Blue Floor - Small Tree" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 538.258, 299 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Blue Floor - Small Tree" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue Floor - Small Tree/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="Blue Floor- Pond" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 538.258, 299 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 96, 64 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Blue Floor- Pond" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue Floor- Pond/StaticBody2D" index="0"]
+
+shape = SubResource( 4 )
+
+[node name="Alien hut" type="Sprite" parent="." index="4"]
+
+position = Vector2( 486, 488 )
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 96, 64 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Alien hut" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alien hut/StaticBody2D" index="0"]
+
+position = Vector2( -7.98702e-006, -1.90735e-006 )
+scale = Vector2( 3.33333, 2.23648 )
+shape = SubResource( 4 )
+
+[node name="rock-1" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 222.258, 364 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 175, 15, 128, 96 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rock-1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rock-1/StaticBody2D" index="0"]
+
+position = Vector2( 3.24213, -0.499966 )
+scale = Vector2( 1.28431, 1.67736 )
+shape = SubResource( 4 )
+
+[node name="rock-2" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 240.258, 226 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 15, 15, 128, 96 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rock-2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rock-2/StaticBody2D" index="0"]
+
+position = Vector2( -7.75786, 1.48891 )
+scale = Vector2( 1.10784, 1.61725 )
+shape = SubResource( 4 )
+
+[node name="cornerWater" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 923, 280.735 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cornerWater" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cornerWater/StaticBody2D" index="0"]
+
+visible = false
+position = Vector2( 12.2036, -12.7344 )
+scale = Vector2( 0.647836, 0.637899 )
+shape = SubResource( 5 )
+
+[node name="sideWater" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 1063.53, 259.47 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="sideWater" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sideWater/StaticBody2D" index="0"]
+
+visible = false
+position = Vector2( 0, -10 )
+shape = SubResource( 6 )
+
+[node name="midwater" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 1068.74, 344 )
+texture = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="midwater" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="midwater/StaticBody2D" index="0"]
+
+visible = false
+shape = SubResource( 7 )
+
+[node name="leftWater" type="Sprite" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 1179.27, 302.735 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="leftWater" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftWater/StaticBody2D" index="0"]
+
+visible = false
+position = Vector2( 10.3611, 0.0314331 )
+shape = SubResource( 8 )
+
+[node name="cornerTopWater" type="Sprite" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 923, 369 )
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cornerTopWater" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cornerTopWater/StaticBody2D" index="0"]
+
+visible = false
+position = Vector2( 12.3624, 12.1388 )
+scale = Vector2( 0.582619, 0.643202 )
+shape = SubResource( 9 )
+
+[node name="topSideWater" type="Sprite" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 1190.26, 386.47 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="topSideWater" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topSideWater/StaticBody2D" index="0"]
+
+visible = false
+position = Vector2( 0, 9.43042 )
+shape = SubResource( 10 )
+
+[node name="watercorner" type="Sprite" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( 910.623, 433 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="watercorner" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="watercorner/StaticBody2D" index="0"]
+
+shape = SubResource( 11 )
+
+[node name="corer-top" type="Sprite" parent="." index="14"]
+
+editor/display_folded = true
+position = Vector2( 1019.33, 432.353 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="corer-top" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="corer-top/StaticBody2D" index="0"]
+
+shape = SubResource( 11 )
+
+
