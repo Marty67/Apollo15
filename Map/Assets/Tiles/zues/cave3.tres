@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=32 format=2]
+[gd_resource type="TileSet" load_steps=34 format=2]
 
 [ext_resource path="res://Map/Assets/Background/Cave/floor-rightwall.png" type="Texture" id=1]
 [ext_resource path="res://Map/Assets/Background/Cave/floor-toprightcorner-outside-empty.png" type="Texture" id=2]
@@ -8,41 +8,42 @@
 [ext_resource path="res://Map/Assets/Background/Cave/ground/edge.png" type="Texture" id=6]
 [ext_resource path="res://Map/Assets/Background/Cave/ground/top-corner.png" type="Texture" id=7]
 [ext_resource path="res://Map/Assets/Background/Cave/ground/bottom-corner.png" type="Texture" id=8]
-[ext_resource path="res://Map/Assets/Background/Cave/floor-leftbottomwall.png" type="Texture" id=9]
-[ext_resource path="res://Map/Assets/Background/Cave/floor-bottomwall.png" type="Texture" id=10]
-[ext_resource path="res://Map/Assets/Background/Cave/floor-outerwall-rightcorner-outside-empty.png" type="Texture" id=11]
-[ext_resource path="res://Map/Assets/Background/Cave/floor2.png" type="Texture" id=12]
-[ext_resource path="res://Map/Assets/Background/Cave/floor-lefttopwall.png" type="Texture" id=13]
-[ext_resource path="res://Map/Assets/Background/Cave/floor-topwall.png" type="Texture" id=14]
-[ext_resource path="res://Map/Assets/Background/Cave/stairs.png" type="Texture" id=15]
-[ext_resource path="res://Map/Assets/Background/Cave/ground/left.png" type="Texture" id=16]
+[ext_resource path="res://Map/Assets/Background/Cave/door-top-brick.png" type="Texture" id=9]
+[ext_resource path="res://Map/Assets/Background/Cave/floor-leftbottomwall.png" type="Texture" id=10]
+[ext_resource path="res://Map/Assets/Background/Cave/floor-bottomwall.png" type="Texture" id=11]
+[ext_resource path="res://Map/Assets/Background/Cave/floor-outerwall-rightcorner-outside-empty.png" type="Texture" id=12]
+[ext_resource path="res://Map/Assets/Background/Cave/floor2.png" type="Texture" id=13]
+[ext_resource path="res://Map/Assets/Background/Cave/floor-lefttopwall.png" type="Texture" id=14]
+[ext_resource path="res://Map/Assets/Background/Cave/floor-topwall.png" type="Texture" id=15]
+[ext_resource path="res://Map/Assets/Background/Cave/stairs.png" type="Texture" id=16]
+[ext_resource path="res://Map/Assets/Background/Cave/ground/left.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, 32, 30.125, 31.875, 30.125, 25, 25.625, 14.5, 16.875, 4.875, 7.25, 1.125, 0, 1 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 9.81332, 10 )
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 32, 0, 32, 7, 11, 7, 11, 0 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -52,10 +53,15 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 points = PoolVector2Array( 10, 32, 10, 11, 0, 11, 0, 0, 10, 0, 30, 11, 30, 22, 30, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=13]
+[sub_resource type="ConvexPolygonShape2D" id=15]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, 10, 10, 10, 10, 0, 30, 0, 30, 20, 20, 30, 0, 30 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -67,7 +73,7 @@ extents = Vector2( 16, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=16]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, 0, 29.875, 0, 30.625, 5.625, 30.125, 18.375, 26.25, 25.75, 18.125, 29.875, 0, 30.5 )
@@ -127,11 +133,11 @@ extents = Vector2( 10, 10 )
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 10 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/name = "floor-leftbottomwall"
-2/texture = ExtResource( 9 )
+2/texture = ExtResource( 10 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 32, 32 )
@@ -145,7 +151,7 @@ extents = Vector2( 10, 10 )
 "shape_transform": Transform2D( 1, 0, 0, 0.282016, 16, 4.3583 )
 } ]
 3/name = "floor-bottomwall"
-3/texture = ExtResource( 10 )
+3/texture = ExtResource( 11 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 32, 32 )
@@ -159,7 +165,7 @@ extents = Vector2( 10, 10 )
 "shape_transform": Transform2D( 1, 0, 0, 0.32227, 16, 5.1231 )
 } ]
 4/name = "floor-outerwall-rightcorner-outside-empty"
-4/texture = ExtResource( 11 )
+4/texture = ExtResource( 12 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 32, 32 )
@@ -177,11 +183,11 @@ extents = Vector2( 10, 10 )
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 11 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/name = "floor2"
-5/texture = ExtResource( 12 )
+5/texture = ExtResource( 13 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 32, 32 )
@@ -190,7 +196,7 @@ extents = Vector2( 10, 10 )
 5/navigation_offset = Vector2( 16, 16 )
 5/shapes = [  ]
 6/name = "floor-lefttopwall"
-6/texture = ExtResource( 13 )
+6/texture = ExtResource( 14 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 32, 32 )
@@ -204,7 +210,7 @@ extents = Vector2( 10, 10 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 7/name = "floor-topwall"
-7/texture = ExtResource( 14 )
+7/texture = ExtResource( 15 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 32, 32 )
@@ -218,7 +224,7 @@ extents = Vector2( 10, 10 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 8/name = "stairs"
-8/texture = ExtResource( 15 )
+8/texture = ExtResource( 16 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 96, 32 )
@@ -237,7 +243,7 @@ extents = Vector2( 10, 10 )
 "shape_transform": Transform2D( 0.460699, 0, 0, 1.63406, 4.1404, 15.8581 )
 } ]
 9/name = "left"
-9/texture = ExtResource( 16 )
+9/texture = ExtResource( 17 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 32, 32 )
@@ -261,7 +267,7 @@ extents = Vector2( 10, 10 )
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 9 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1.63315, 0, 0, 1.1489, 16.0269, 20.5794 )
 } ]
 11/name = "corner"
@@ -283,7 +289,7 @@ extents = Vector2( 10, 10 )
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 15 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 12/name = "top"
@@ -297,8 +303,8 @@ extents = Vector2( 10, 10 )
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 8 ),
-"shape_transform": Transform2D( 1.61743, 0, 0, 0.332647, 16.1291, 2.99246 )
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1.61743, 0, 0, 0.332647, 16.1291, 2.9925 )
 } ]
 13/name = "edge"
 13/texture = ExtResource( 6 )
@@ -311,7 +317,7 @@ extents = Vector2( 10, 10 )
 13/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 12 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1.28781, 0, 0, 1.27412, 19.266, 19.3118 )
 } ]
 14/name = "top-corner"
@@ -355,8 +361,22 @@ extents = Vector2( 10, 10 )
 15/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 13 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+16/name = "door-top-brick"
+16/texture = ExtResource( 9 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 64, 32 )
+16/is_autotile = false
+16/occluder_offset = Vector2( 32, 16 )
+16/navigation_offset = Vector2( 32, 16 )
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 16 )
 } ]
 _sections_unfolded = [ "11" ]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Map/Assets/Background/Cave/floor-rightwall.png" type="Texture" id=1]
 [ext_resource path="res://Map/Assets/Background/Cave/floor-toprightcorner-outside-empty.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Map/Assets/Background/Cave/ground/edge.png" type="Texture" id=14]
 [ext_resource path="res://Map/Assets/Background/Cave/ground/top-corner.png" type="Texture" id=15]
 [ext_resource path="res://Map/Assets/Background/Cave/ground/bottom-corner.png" type="Texture" id=16]
+[ext_resource path="res://Map/Assets/Background/Cave/door-top-brick.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -52,22 +53,27 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 9.81332, 10 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
+
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="floor-rightwall" type="Sprite" parent="." index="0"]
 
@@ -294,7 +300,7 @@ bounce = 0.0
 
 position = Vector2( 0.0269165, 4.57939 )
 scale = Vector2( 1.63315, 1.1489 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="corner" type="Sprite" parent="." index="11"]
 
@@ -328,7 +334,7 @@ bounce = 0.0
 
 position = Vector2( 0.129074, -13.0075 )
 scale = Vector2( 1.61743, 0.332647 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="edge" type="Sprite" parent="." index="13"]
 
@@ -353,7 +359,7 @@ bounce = 0.0
 
 position = Vector2( 3.26596, 3.31176 )
 scale = Vector2( 1.28781, 1.27412 )
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="top-corner" type="Sprite" parent="." index="14"]
 
@@ -370,5 +376,28 @@ texture = ExtResource( 16 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="door-top-brick" type="Sprite" parent="." index="16"]
+
+editor/display_folded = true
+position = Vector2( 555.285, 283.194 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="door-top-brick" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door-top-brick/StaticBody2D" index="0"]
+
+shape = SubResource( 11 )
 
 
