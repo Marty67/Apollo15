@@ -32,6 +32,10 @@ func gain_oxygen(amount): # oxygen is incremented by amount in parameter
 	
 	#oxygen = max(oxygen, max_oxygen)
 	emit_signal("oxygen_changed", oxygen)
+	
+func load_oxygen(o2):
+	oxygen = o2
+	emit_signal("oxygen_changed", oxygen) 
 
 func getOxygen():
 	return oxygen						

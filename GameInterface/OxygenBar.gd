@@ -18,15 +18,3 @@ func initialize(maximum):
 func _on_Interface_oxygen_changed(new_oxygen):
 	$TextureProgress.value = new_oxygen # texture for when the oxygen level reduces
 	current_oxygen = new_oxygen # texture for oxygen bar at max replaced by new one
-	
-
-
-func save():
-	var save_dict = {self.get_name():{
-		"oxygen_bar":current_oxygen}
-	} # save a dictionary structure showing the current oxygen level to save
-	return save_dict
-
-
-func load_state(data):
-	current_oxygen = data["oxygen_bar"] # load the current health based on the level saved previously

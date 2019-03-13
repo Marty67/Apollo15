@@ -608,9 +608,9 @@ tracks/1/keys = {
 }
 
 [node name="player" type="KinematicBody2D" groups=[
+"actors",
 "player",
 "Persistant",
-"actors",
 ]]
 
 modulate = Color( 0.988281, 0.979233, 0.965118, 1 )

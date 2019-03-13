@@ -122,7 +122,9 @@ func _on_Timer_timeout(): # this method is called every 2 seconds and calls lose
 func save():
 	var save_dict = {self.get_name():{
 		"pos_x":self.position.x,
-		"pos_y":self.position.y}
+		"pos_y":self.position.y,
+		"health":Global.Health.getHealth(),
+		"oxygen":Global.Oxygen.getOxygen()}
 	}
 	return save_dict
 
@@ -130,7 +132,8 @@ func save():
 func load_state(data):
 	position.x = data["pos_x"]
 	position.y = data["pos_y"]
-	
+	Global.Health.load_health(data["health"])
+	Global.Oxygen.load_oxygen(data["oxygen"])
 	#for attribute in data:
 	#	if attribute == 'pos':
 	#		set_pos(Vector2(data['pos']['x'], data['pos']['y']))	
