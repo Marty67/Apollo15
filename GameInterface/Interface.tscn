@@ -7,7 +7,7 @@
 [ext_resource path="res://Scripts/Player/Oxygen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Character/Health.tscn" type="PackedScene" id=6]
 
-[node name="Interface" type="Control" groups=[
+[node name="Interface" type="Control" index="0" groups=[
 "actors",
 ]]
 

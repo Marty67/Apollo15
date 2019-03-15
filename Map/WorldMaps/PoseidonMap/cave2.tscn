@@ -4,7 +4,7 @@
 [ext_resource path="res://Map/Assets/Background/Cave/right.png" type="Texture" id=2]
 [ext_resource path="res://Map/Assets/Tiles/PoseidonTiles/cave1.tres" type="TileSet" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 __meta__ = {
 "_edit_vertical_guides_": [  ]
@@ -70,5 +70,9 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="2"]
+
+color = Color( 0.00784314, 0.113725, 0.172549, 1 )
 
 

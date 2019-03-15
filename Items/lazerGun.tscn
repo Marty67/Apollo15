@@ -1,9 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Pickup.gd" type="Script" id=1]
-[ext_resource path="res://Images/back lazer.png" type="Texture" id=2]
+[ext_resource path="res://particles/aura.shader" type="Shader" id=2]
+[ext_resource path="res://Images/back lazer.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 2 )
+shader_param/aura_width = 2.0
+shader_param/aura_color = Color( 0.0148315, 0.11703, 0.949219, 1 )
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 26.0475, 10 )
@@ -22,14 +31,21 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-texture = ExtResource( 2 )
+material = SubResource( 1 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 visible = false
-shape = SubResource( 1 )
+position = Vector2( 0.264146, 3.22684 )
+scale = Vector2( 2.16592, 4.20533 )
+shape = SubResource( 2 )
 
 

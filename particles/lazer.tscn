@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://particles/lazerBeam.gd" type="Script" id=1]
+[ext_resource path="res://particles/outline.shader" type="Shader" id=2]
+[ext_resource path="res://Images/laserGreen10.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = ExtResource( 2 )
+shader_param/radius = 1.0
+shader_param/modulate = null
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="lazer" type="Area2D" index="0"]
+
+position = Vector2( 241.963, 514.455 )
+rotation = 3.14159
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause", "Transform", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+visible = false
+position = Vector2( -3.55385, -0.180054 )
+scale = Vector2( 0.943347, 3.00973 )
+shape = SubResource( 1 )
+
+[node name="burnTimer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = false
+
+[node name="laserGreen10" type="Sprite" parent="." index="2"]
+
+material = SubResource( 2 )
+position = Vector2( -2.50499, -0.286255 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Light2D" type="Light2D" parent="laserGreen10" index="0"]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="hitbox" type="Area2D" parent="." index="3"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" index="0"]
+
+position = Vector2( -2.25308, -2.19931 )
+scale = Vector2( 1.03628, 3.17791 )
+shape = SubResource( 3 )
+
+[connection signal="timeout" from="burnTimer" to="." method="_on_burnTimer_timeout"]
+
+

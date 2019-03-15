@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Map/Assets/Tiles/PoseidonTiles/Water-back.tres" type="TileSet" id=1]
 [ext_resource path="res://Map/Assets/shaders/Water-shader/water.tscn" type="PackedScene" id=2]
@@ -8,11 +8,21 @@
 [ext_resource path="res://Map/Assets/Background/OldImages/left.png" type="Texture" id=6]
 [ext_resource path="res://Map/Assets/Tiles/PoseidonTiles/obstical1.tres" type="TileSet" id=7]
 [ext_resource path="res://Map/Assets/Tiles/PoseidonTiles/cave1.tres" type="TileSet" id=8]
-[ext_resource path="res://Map/Assets/Tiles/EasetEgg/easteregg.tres" type="TileSet" id=9]
-[ext_resource path="res://Scenes/Character/attack2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://particles/outline.shader" type="Shader" id=9]
+[ext_resource path="res://Map/Assets/Tiles/EasetEgg/easteregg.tres" type="TileSet" id=10]
 [ext_resource path="res://Map/Assets/shaders/rain/RainCopy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Character/picydon.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/playerSpawnPoint.tscn" type="PackedScene" id=13]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 9 )
+shader_param/radius = 2.0
+shader_param/modulate = null
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="Shader" id=2]
 
 resource_local_to_scene = true
 code = "shader_type canvas_item;
@@ -61,17 +71,17 @@ void fragment(){
 }"
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=3]
 
 resource_local_to_scene = true
 render_priority = 0
-shader = SubResource( 1 )
+shader = SubResource( 2 )
 shader_param/direction = null
 shader_param/velocity = null
 shader_param/intensity = null
 _sections_unfolded = [ "Resource", "shader_param" ]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Poseidon" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -242,8 +252,9 @@ __meta__ = {
 
 [node name="eastereggs" type="TileMap" parent="." index="4"]
 
+material = SubResource( 1 )
 mode = 0
-tile_set = ExtResource( 9 )
+tile_set = ExtResource( 10 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -259,109 +270,187 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -5898074, 1, 0, -2752592, 0, 0 )
+_sections_unfolded = [ "Material" ]
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="player" parent="." index="5" instance=ExtResource( 10 )]
+[node name="snow" type="Node2D" parent="." index="5"]
 
-position = Vector2( 900, 450 )
+[node name="TextureRect" parent="snow" index="0" instance=ExtResource( 11 )]
 
-[node name="TextureRect" parent="." index="6" instance=ExtResource( 11 )]
-
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = -1388.0
 margin_top = -805.0
 margin_right = 2724.0
 margin_bottom = 1863.0
 
-[node name="TextureRect9" parent="." index="7" instance=ExtResource( 11 )]
+[node name="TextureRect9" parent="snow" index="1" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = -5564.0
 margin_top = -805.0
 margin_right = -1452.0
 margin_bottom = 1863.0
 
-[node name="TextureRect11" parent="." index="8" instance=ExtResource( 11 )]
+[node name="TextureRect11" parent="snow" index="2" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = -9740.0
 margin_top = -805.0
 margin_right = -5628.0
 margin_bottom = 1863.0
 
-[node name="TextureRect8" parent="." index="9" instance=ExtResource( 11 )]
+[node name="TextureRect8" parent="snow" index="3" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = -1388.0
 margin_top = 1927.0
 margin_right = 2724.0
 margin_bottom = 4595.0
 
-[node name="TextureRect5" parent="." index="10" instance=ExtResource( 11 )]
+[node name="TextureRect5" parent="snow" index="4" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = -1388.0
 margin_top = -3537.0
 margin_right = 2724.0
 margin_bottom = -869.0
 
-[node name="TextureRect10" parent="." index="11" instance=ExtResource( 11 )]
+[node name="TextureRect10" parent="snow" index="5" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = -5564.0
 margin_top = -3537.0
 margin_right = -1452.0
 margin_bottom = -869.0
 
-[node name="TextureRect12" parent="." index="12" instance=ExtResource( 11 )]
+[node name="TextureRect12" parent="snow" index="6" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = -9740.0
 margin_top = -3537.0
 margin_right = -5628.0
 margin_bottom = -869.0
 
-[node name="TextureRect3" parent="." index="13" instance=ExtResource( 11 )]
+[node name="TextureRect3" parent="snow" index="7" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = 2788.0
 margin_top = -805.0
 margin_right = 6900.0
 margin_bottom = 1863.0
 
-[node name="TextureRect6" parent="." index="14" instance=ExtResource( 11 )]
+[node name="TextureRect6" parent="snow" index="8" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = 2788.0
 margin_top = 1927.0
 margin_right = 6900.0
 margin_bottom = 4595.0
 
-[node name="TextureRect4" parent="." index="15" instance=ExtResource( 11 )]
+[node name="TextureRect4" parent="snow" index="9" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = 6964.0
 margin_top = -806.0
 margin_right = 11076.0
 margin_bottom = 1862.0
 
-[node name="TextureRect7" parent="." index="16" instance=ExtResource( 11 )]
+[node name="TextureRect7" parent="snow" index="10" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = 6964.0
 margin_top = 1926.0
 margin_right = 11076.0
 margin_bottom = 4594.0
 
-[node name="TextureRect2" parent="." index="17" instance=ExtResource( 11 )]
+[node name="TextureRect2" parent="snow" index="11" instance=ExtResource( 11 )]
 
-material = SubResource( 2 )
+material = SubResource( 3 )
 margin_left = 2788.0
 margin_top = -3872.0
 margin_right = 6898.0
 margin_bottom = -869.0
+
+[node name="Aliens" type="Node2D" parent="." index="6"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="alien" parent="Aliens" index="0" instance=ExtResource( 12 )]
+
+position = Vector2( -139.938, 794.215 )
+
+[node name="alien2" parent="Aliens" index="1" instance=ExtResource( 12 )]
+
+position = Vector2( 1888.86, 505.125 )
+
+[node name="alien3" parent="Aliens" index="2" instance=ExtResource( 12 )]
+
+position = Vector2( -1193.05, 56.0022 )
+
+[node name="alien4" parent="Aliens" index="3" instance=ExtResource( 12 )]
+
+position = Vector2( 1000.94, -460.231 )
+
+[node name="alien5" parent="Aliens" index="4" instance=ExtResource( 12 )]
+
+position = Vector2( 1935.32, -336.335 )
+
+[node name="alien6" parent="Aliens" index="5" instance=ExtResource( 12 )]
+
+position = Vector2( 5869.01, -351.822 )
+
+[node name="alien7" parent="Aliens" index="6" instance=ExtResource( 12 )]
+
+position = Vector2( 6142.62, 721.943 )
+
+[node name="alien8" parent="Aliens" index="7" instance=ExtResource( 12 )]
+
+position = Vector2( 4692, 629.021 )
+
+[node name="alien9" parent="Aliens" index="8" instance=ExtResource( 12 )]
+
+position = Vector2( 7366.09, -264.062 )
+
+[node name="alien10" parent="Aliens" index="9" instance=ExtResource( 12 )]
+
+position = Vector2( 4507.66, 3221.83 )
+
+[node name="alien11" parent="Aliens" index="10" instance=ExtResource( 12 )]
+
+position = Vector2( 5762.58, 2480.29 )
+
+[node name="alien12" parent="Aliens" index="11" instance=ExtResource( 12 )]
+
+position = Vector2( 7049.19, 2632.4 )
+
+[node name="alien13" parent="Aliens" index="12" instance=ExtResource( 12 )]
+
+position = Vector2( 6624.55, 3608.45 )
+
+[node name="alien14" parent="Aliens" index="13" instance=ExtResource( 12 )]
+
+position = Vector2( 4013.3, -1702.79 )
+
+[node name="alien15" parent="Aliens" index="14" instance=ExtResource( 12 )]
+
+position = Vector2( 4051.32, -3059.11 )
+
+[node name="alien16" parent="Aliens" index="15" instance=ExtResource( 12 )]
+
+position = Vector2( 4640.76, -2564.75 )
+
+[node name="alien17" parent="Aliens" index="16" instance=ExtResource( 12 )]
+
+position = Vector2( 5413.99, -1658.42 )
+
+[node name="playerSpawnPoint" parent="." index="7" instance=ExtResource( 13 )]
+
+position = Vector2( 926.013, 447.453 )
 
 

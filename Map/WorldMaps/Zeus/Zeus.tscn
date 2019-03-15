@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Map/Assets/Tiles/zues/water-zeus.tres" type="TileSet" id=1]
 [ext_resource path="res://Map/Assets/shaders/Water-shader/water.tscn" type="PackedScene" id=2]
@@ -6,11 +6,20 @@
 [ext_resource path="res://Map/Assets/Tiles/zues/obsticals-zeus.tres" type="TileSet" id=4]
 [ext_resource path="res://Map/Assets/Tiles/zues/cave3.tres" type="TileSet" id=5]
 [ext_resource path="res://Map/Assets/Background/OldImages/entrance.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/Character/attack2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Character/Zuice.tscn" type="PackedScene" id=7]
+[ext_resource path="res://particles/Fog2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://particles/lightning.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Items/baguette.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Items/tank.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/door.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/playerSpawnPoint.tscn" type="PackedScene" id=13]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="zeus" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -231,8 +240,225 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="player" parent="." index="7" instance=ExtResource( 7 )]
+[node name="Aliens" type="Node2D" parent="." index="7"]
 
-position = Vector2( -163.496, 122.756 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="alien" parent="Aliens" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+
+[node name="alien2" parent="Aliens" index="1" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -1882.7, 153.543 )
+
+[node name="CollisionShape2D" parent="Aliens/alien2/hitbox" index="0"]
+
+visible = false
+
+[node name="alien3" parent="Aliens" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( -699.934, -2741.13 )
+
+[node name="alien4" parent="Aliens" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 1050.88, -1581.71 )
+
+[node name="alien5" parent="Aliens" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( 3284.13, -1970.78 )
+
+[node name="alien6" parent="Aliens" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 1992.43, -1387.17 )
+
+[node name="alien7" parent="Aliens" index="6" instance=ExtResource( 7 )]
+
+position = Vector2( 3657.64, 161.324 )
+
+[node name="alien8" parent="Aliens" index="7" instance=ExtResource( 7 )]
+
+position = Vector2( 3315.26, 1118.43 )
+
+[node name="alien9" parent="Aliens" index="8" instance=ExtResource( 7 )]
+
+position = Vector2( 4568.06, 1484.16 )
+
+[node name="alien10" parent="Aliens" index="9" instance=ExtResource( 7 )]
+
+position = Vector2( 5766.4, 402.547 )
+
+[node name="alien11" parent="Aliens" index="10" instance=ExtResource( 7 )]
+
+position = Vector2( 4466.91, -1114.82 )
+
+[node name="alien12" parent="Aliens" index="11" instance=ExtResource( 7 )]
+
+position = Vector2( 4311.28, -2422.1 )
+
+[node name="alien13" parent="Aliens" index="12" instance=ExtResource( 7 )]
+
+position = Vector2( 5704.15, -3106.86 )
+
+[node name="alien14" parent="Aliens" index="13" instance=ExtResource( 7 )]
+
+position = Vector2( 7120.36, -2686.66 )
+
+[node name="alien15" parent="Aliens" index="14" instance=ExtResource( 7 )]
+
+position = Vector2( 5517.39, -3550.4 )
+
+[node name="alien16" parent="Aliens" index="15" instance=ExtResource( 7 )]
+
+position = Vector2( 1673.39, -2196.44 )
+
+[node name="alien17" parent="Aliens" index="16" instance=ExtResource( 7 )]
+
+position = Vector2( 1074.22, -1107.04 )
+
+[node name="alien18" parent="Aliens" index="17" instance=ExtResource( 7 )]
+
+position = Vector2( 1478.85, -1192.64 )
+
+[node name="alien19" parent="Aliens" index="18" instance=ExtResource( 7 )]
+
+position = Vector2( -349.772, -492.313 )
+
+[node name="alien20" parent="Aliens" index="19" instance=ExtResource( 7 )]
+
+position = Vector2( 8.17188, -430.062 )
+
+[node name="alien21" parent="Aliens" index="20" instance=ExtResource( 7 )]
+
+position = Vector2( 475.055, -398.936 )
+
+[node name="alien22" parent="Aliens" index="21" instance=ExtResource( 7 )]
+
+position = Vector2( 311.646, -391.155 )
+
+[node name="Weather" type="Node2D" parent="." index="8"]
+
+[node name="fog" parent="Weather" index="0" instance=ExtResource( 8 )]
+
+position = Vector2( -3205.84, -2564.56 )
+scale = Vector2( 14.0908, 10.3057 )
+
+[node name="lightning" type="Node2D" parent="Weather" index="1"]
+
+editor/display_folded = true
+
+[node name="bolts" parent="Weather/lightning" index="0" instance=ExtResource( 9 )]
+
+position = Vector2( 975.83, -2114.13 )
+
+[node name="bolts4" parent="Weather/lightning" index="1" instance=ExtResource( 9 )]
+
+position = Vector2( 1007.04, -5365.02 )
+
+[node name="bolts2" parent="Weather/lightning" index="2" instance=ExtResource( 9 )]
+
+position = Vector2( 990.566, -3230.56 )
+
+[node name="bolts3" parent="Weather/lightning" index="3" instance=ExtResource( 9 )]
+
+position = Vector2( 1006.41, -4347.56 )
+
+[node name="pickables" type="Node2D" parent="." index="9"]
+
+editor/display_folded = true
+
+[node name="baguettes" type="Node2D" parent="pickables" index="0"]
+
+editor/display_folded = true
+
+[node name="baguette" parent="pickables/baguettes" index="0" instance=ExtResource( 10 )]
+
+position = Vector2( 388.513, 502.512 )
+scale = Vector2( 0.389829, 0.467113 )
+
+[node name="baguette2" parent="pickables/baguettes" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( 675.965, -177.483 )
+scale = Vector2( 0.389829, 0.467113 )
+
+[node name="baguette4" parent="pickables/baguettes" index="2" instance=ExtResource( 10 )]
+
+position = Vector2( 6341.17, -881.235 )
+scale = Vector2( 0.389829, 0.467113 )
+
+[node name="baguette5" parent="pickables/baguettes" index="3" instance=ExtResource( 10 )]
+
+position = Vector2( 5649.15, -1561.53 )
+scale = Vector2( 0.389829, 0.467113 )
+
+[node name="baguette6" parent="pickables/baguettes" index="4" instance=ExtResource( 10 )]
+
+position = Vector2( -1247.63, -2112.8 )
+scale = Vector2( 0.389829, 0.467113 )
+
+[node name="o2 tanks" type="Node2D" parent="pickables" index="1"]
+
+editor/display_folded = true
+
+[node name="oxygen" parent="pickables/o2 tanks" index="0" instance=ExtResource( 11 )]
+
+position = Vector2( 351.003, 493.612 )
+scale = Vector2( 0.656152, 0.781924 )
+
+[node name="oxygen2" parent="pickables/o2 tanks" index="1" instance=ExtResource( 11 )]
+
+position = Vector2( 3096.88, 2614.47 )
+scale = Vector2( 0.656152, 0.781924 )
+
+[node name="oxygen3" parent="pickables/o2 tanks" index="2" instance=ExtResource( 11 )]
+
+position = Vector2( 3553.36, -833.681 )
+scale = Vector2( 0.656152, 0.781924 )
+
+[node name="oxygen4" parent="pickables/o2 tanks" index="3" instance=ExtResource( 11 )]
+
+position = Vector2( 4789.36, -3411.02 )
+scale = Vector2( 0.656152, 0.781924 )
+
+[node name="oxygen5" parent="pickables/o2 tanks" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( 4866.61, -3825.36 )
+scale = Vector2( 0.656152, 0.781924 )
+
+[node name="oxygen6" parent="pickables/o2 tanks" index="5" instance=ExtResource( 11 )]
+
+position = Vector2( -1727.72, -2469.97 )
+scale = Vector2( 0.656152, 0.781924 )
+
+[node name="passageWays" type="Node" parent="." index="10"]
+
+editor/display_folded = true
+
+[node name="door" parent="passageWays" index="0" instance=ExtResource( 12 )]
+
+next_map = "res://Map/WorldMaps/Zeus/cave1-zeus.tscn"
+
+[node name="door2" parent="passageWays" index="1" instance=ExtResource( 12 )]
+
+position = Vector2( 5492.69, 1484.29 )
+next_map = "res://Map/WorldMaps/Zeus/cave2-zeus.tscn"
+
+[node name="playerSpawnPoint" parent="." index="11" instance=ExtResource( 13 )]
+
+position = Vector2( 1460.17, 96.7081 )
+rotation = -3.14159
+scale = Vector2( 0.173843, -0.131718 )
+
+[node name="playerSpawnPoint2" parent="." index="12" instance=ExtResource( 13 )]
+
+position = Vector2( 5494.06, 1523.04 )
+rotation = -3.14159
+scale = Vector2( 0.173843, -0.131718 )
 
 
+[editable path="Aliens/alien"]
+[editable path="Aliens/alien2"]
+[editable path="passageWays/door2"]

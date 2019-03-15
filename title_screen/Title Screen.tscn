@@ -19,7 +19,7 @@
 [ext_resource path="res://Main Menu Resources/Settings selected.png" type="Texture" id=17]
 [ext_resource path="res://FadeIn.tscn" type="PackedScene" id=18]
 
-[node name="Title Screen" type="Control" index="0"]
+[node name="Title Screen" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0

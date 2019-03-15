@@ -4,8 +4,10 @@ extends "res://Scripts/Engine/Entity.gd"
  
 const DAMAGE = 2   #  this controls how much damage the player does to enemy.
 const TYPE = "PLAYER" #this is used to identify player instance so enemy does damage to player
+const LAZER = preload("res://particles/lazer.tscn")
 var idle = true 
 var torch_on = false
+var equipped = false
 
 var components = 0 # keeps track of the total components the player has.
 
@@ -27,7 +29,7 @@ func _physics_process(delta):  # this method is a special method which is like a
 	elif idle == false:
 		idle = true
 		anim_switch("idle") #activates idle animation 
-	if Input.is_action_just_pressed("a") and idle == true:  #only allows player to attack while staying still
+	if Input.is_action_just_pressed("a") and idle == true:  #only allows player to attack with weapon if still and not using gun.
 		anim_switch("attack")
 	
 	if Input.is_action_just_pressed("a"):
@@ -49,6 +51,66 @@ func _physics_process(delta):  # this method is a special method which is like a
 		else:
 			torch_on = false
 			$torch.hide() # this hides the torch light node to show the torch turning off on screen.
+			
+	if Input.is_action_just_pressed("d"):
+		if equipped:
+			$gun.hide()
+			equipped = false
+			
+		else:	
+			$gun.show()
+			equipped = true
+			
+			
+	if Input.is_action_just_pressed("f")  and equipped == true:
+		
+		var lazer_shot = LAZER.instance()
+		get_parent().add_child(lazer_shot)
+		lazer_shot.global_position = $gun/Position2D.global_position
+		
+		if movedir == dir.right:
+			Global.Lazer.set_position(10,0)
+			Global.Lazer.rotation_degrees = 90
+			
+		elif movedir == dir.left:
+			Global.Lazer.set_position(-10,0)
+			Global.Lazer.rotation_degrees = -90
+			
+		elif movedir == dir.down:
+			Global.Lazer.set_position(0,10)
+			#Global.Lazer.rotation_degrees =  -180
+			
+		elif movedir == dir.up:
+	   		Global.Lazer.set_position(0,-10)
+	   		#Global.Lazer.rotation_degrees = 90
+			
+		else:
+			
+			if $anim.current_animation ==  "idledown":
+				Global.Lazer.set_position(0,10)
+				
+			elif $anim.current_animation ==  "idleup":
+				Global.Lazer.set_position(0,-10)
+				
+			elif $anim.current_animation ==  "idleleft":
+				Global.Lazer.set_position(-10,0)
+				Global.Lazer.rotation_degrees = -90
+				
+			elif $anim.current_animation ==  "idleright":
+				Global.Lazer.set_position(10,0)
+				Global.Lazer.rotation_degrees = 90		
+				
+			
+				
+					
+			
+			 						
+			
+			
+			
+			
+			
+					
 
 					
 				
@@ -122,9 +184,7 @@ func _on_Timer_timeout(): # this method is called every 2 seconds and calls lose
 func save():
 	var save_dict = {self.get_name():{
 		"pos_x":self.position.x,
-		"pos_y":self.position.y,
-		"health":Global.Health.getHealth(),
-		"oxygen":Global.Oxygen.getOxygen()}
+		"pos_y":self.position.y}
 	}
 	return save_dict
 
@@ -132,8 +192,7 @@ func save():
 func load_state(data):
 	position.x = data["pos_x"]
 	position.y = data["pos_y"]
-	Global.Health.load_health(data["health"])
-	Global.Oxygen.load_oxygen(data["oxygen"])
+	
 	#for attribute in data:
 	#	if attribute == 'pos':
 	#		set_pos(Vector2(data['pos']['x'], data['pos']['y']))	

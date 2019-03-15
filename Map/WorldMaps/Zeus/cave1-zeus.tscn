@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Map/Assets/Tiles/zues/cave-ground-zeus.tres" type="TileSet" id=1]
 [ext_resource path="res://Map/Assets/Background/OldImages/entrance.png" type="Texture" id=2]
 [ext_resource path="res://Map/Assets/Tiles/zues/cave3.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/playerSpawnPoint.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/RocketBooster.tscn" type="PackedScene" id=6]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 __meta__ = {
 "_edit_group_": true,
@@ -76,4 +79,24 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="playerSpawnPoint" parent="." index="2" instance=ExtResource( 4 )]
 
+position = Vector2( 793.596, 1004.53 )
+
+[node name="door" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 785.208, 1072.7 )
+_sections_unfolded = [ "Material", "Pause" ]
+next_map = "res://Map/WorldMaps/Zeus/Zeus.tscn"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="4"]
+
+color = Color( 0.144558, 0.143677, 0.171875, 1 )
+
+[node name="rocket booster" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 240, -400 )
+scale = Vector2( 1.82441, 2.60626 )
+
+
+[editable path="door"]

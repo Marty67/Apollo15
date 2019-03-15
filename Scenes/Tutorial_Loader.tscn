@@ -8,7 +8,7 @@
 [ext_resource path="res://Scenes/Invent.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/dialogueDynamic.tscn" type="PackedScene" id=7]
 
-[node name="Tutorial" type="Node2D" index="0"]
+[node name="Tutorial" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -16,7 +16,7 @@ _sections_unfolded = [ "Pause" ]
 [node name="TutorialLoader" type="Node2D" parent="." index="0"]
 
 script = ExtResource( 2 )
-START_Tutorial = "res://Map/World1/WorldMaps/MainCave.tscn"
+START_Tutorial = "res://Map/WorldMaps/MVP/MainCave.tscn"
 
 [node name="player" parent="TutorialLoader" index="0" instance=ExtResource( 3 )]
 

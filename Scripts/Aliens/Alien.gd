@@ -75,6 +75,10 @@ func _physics_process(delta): # everything in this function is a loop. so everyt
 		
 		if distance_2_player <=150:  # if player is really close to alien then alien will speed up drastically.
 			speed = 250
+			
+			
+	if health <= 0:
+		queue_free()		
 		
 			
 			

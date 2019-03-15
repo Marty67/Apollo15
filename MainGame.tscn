@@ -15,13 +15,9 @@ script = ExtResource( 1 )
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Pause" ]
-START = "res://Map/World1/WorldMaps/OutsideMain.tscn"
+START = "res://Map/WorldMaps/Zeus/Zeus.tscn"
 
 [node name="player" parent="maploader" index="0" instance=ExtResource( 3 )]
-
-[node name="sprite" parent="maploader/player" index="0"]
-
-frame = 23
 
 [node name="OxygenTimer" parent="maploader" index="1" instance=ExtResource( 4 )]
 
