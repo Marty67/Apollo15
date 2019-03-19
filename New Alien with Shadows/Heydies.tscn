@@ -184,7 +184,7 @@ extents = Vector2( 45.9818, 31.0497 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="player" type="KinematicBody2D"]
+[node name="alien" type="KinematicBody2D" index="0"]
 
 position = Vector2( 522.412, 296.659 )
 scale = Vector2( 0.34, 0.34 )

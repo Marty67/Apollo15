@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/interface.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Character/boss.tscn" type="PackedScene" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 573.924, 59.1069 )
 
@@ -23,7 +23,7 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Transform" ]
 
 [node name="boss" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -85.731, 57.8388 )
+position = Vector2( 321.82, 54.414 )
 
 
 [editable path="player"]

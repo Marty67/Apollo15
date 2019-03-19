@@ -101,4 +101,8 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="3"]
+
+color = Color( 0.00784314, 0.113725, 0.172549, 1 )
+
 

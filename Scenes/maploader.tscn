@@ -6,12 +6,12 @@
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Inventory.tscn" type="PackedScene" id=5]
 
-[node name="maploader" type="Node" index="0"]
+[node name="maploader" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
-START = "res://Map/World1/WorldMaps/OutsideMain.tscn"
+START = "res://Map/WorldMaps/PoseidonMap/Poseidon.tscn"
 
 [node name="player" parent="." index="0" instance=ExtResource( 2 )]
 

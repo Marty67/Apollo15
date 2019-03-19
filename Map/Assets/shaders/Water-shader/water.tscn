@@ -4,9 +4,6 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Map/Assets/shaders/Water-shader/water.gd" type="Script" id=3]
 
-
-
-
 [sub_resource type="ShaderMaterial" id=1]
 
 render_priority = 0
@@ -16,7 +13,7 @@ shader_param/sprite_scale = Vector2( 7.5, 5.5 )
 shader_param/scale_x = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 725.248, 287.532 )
 scale = Vector2( 7.5, 5.5 )

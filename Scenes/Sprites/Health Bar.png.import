@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/painting_old_guitarist.jpg-f6b5d6383971475564ee1d2fb7d6bed5.stex"
+path="res://.import/Health Bar.png-44cbd881183bf760784cb138a17943f6.stex"
 
 [deps]
 
-source_file="res://loading screen/painting_old_guitarist.jpg"
-dest_files=[ "res://.import/painting_old_guitarist.jpg-f6b5d6383971475564ee1d2fb7d6bed5.stex" ]
+source_file="res://Scenes/Sprites/Health Bar.png"
+dest_files=[ "res://.import/Health Bar.png-44cbd881183bf760784cb138a17943f6.stex" ]
 
 [params]
 

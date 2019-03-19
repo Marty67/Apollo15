@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Map/Assets/Tiles/PoseidonTiles/cave-Background.tres" type="TileSet" id=1]
 [ext_resource path="res://Map/Assets/Background/Cave/bottom.png" type="Texture" id=2]
 [ext_resource path="res://Map/Assets/Tiles/PoseidonTiles/cave1.tres" type="TileSet" id=3]
+[ext_resource path="res://particles/torchLight2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/torchLight2D2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/radar.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D" index="0"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true,
@@ -72,5 +76,58 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+
+[node name="torches" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="torchLeft" parent="torches" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( -885.739, 380.32 )
+scale = Vector2( 1.15327, 0.948984 )
+
+[node name="torchLeft3" parent="torches" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 1127.85, 89.3077 )
+scale = Vector2( 1.15327, 0.948984 )
+
+[node name="torchLeft4" parent="torches" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 1064.85, 198.309 )
+scale = Vector2( 1.15327, 0.948984 )
+
+[node name="torchLeft5" parent="torches" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 1061.85, 388.31 )
+scale = Vector2( 1.15327, 0.948984 )
+
+[node name="torchLeft6" parent="torches" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 1160.85, 494.311 )
+scale = Vector2( 1.15327, 0.948984 )
+
+[node name="torchLeft2" parent="torches" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( -885.739, 180.765 )
+scale = Vector2( 1.15327, 0.948984 )
+
+[node name="torchRight" parent="torches" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( -295.849, 444.495 )
+scale = Vector2( 0.964865, 0.9424 )
+
+[node name="torchRight2" parent="torches" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( -134.665, 212.546 )
+scale = Vector2( 0.964865, 0.9424 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="3"]
+
+color = Color( 0.00961304, 0.117363, 0.175781, 1 )
+
+[node name="radar" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( -357.37, -1044.58 )
+scale = Vector2( 4.73379, 3.76281 )
 
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scripts/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Sprites/attack.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/batteryTorch.tscn" type="PackedScene" id=3]
 [ext_resource path="res://particles/DustWalk.tscn" type="PackedScene" id=4]
 [ext_resource path="res://particles/Fire.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/lazerGun.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Shader" id=1]
 
@@ -199,6 +200,54 @@ tracks/1/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("gun/Sprite:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.9156 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("gun/Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.9156 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -127.168, 38.8702 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gun/Sprite:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.9156 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -86.0415 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gun/Position2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.915855 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -142.971, 101.201 ) ]
+}
 
 [sub_resource type="Animation" id=9]
 
@@ -228,6 +277,54 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("gun/Sprite:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.0651497 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("gun/Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0651497 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -201.652, 12.4941 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gun/Sprite:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.0651497 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.33794 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gun/Position2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -270.856, 0.971344 ) ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -259,6 +356,54 @@ tracks/1/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("gun/Sprite:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("gun:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 80.4446, 33.701 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gun:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gun/Position2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.286075 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -123.296, 5.98285 ) ]
+}
 
 [sub_resource type="Animation" id=11]
 
@@ -288,6 +433,54 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("gun/Sprite:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.24999 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("gun/Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.24999 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -90.8344, -49.9759 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gun/Sprite:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.24999 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -86.0415 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gun/Position2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.24801 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -93.784, -111.787 ) ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -350,6 +543,54 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( -8.62558, 54.4726 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("gun/Sprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gun/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -127.168, 38.8702 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gun/Sprite:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -86.0415 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("gun/Position2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.41509 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -141.331, 102.454 ) ]
+}
 
 [sub_resource type="Animation" id=14]
 
@@ -391,6 +632,54 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1.45013, 59.123 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("gun/Sprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0797249 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gun/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.335404 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -201.652, 12.4941 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gun/Sprite:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.335404 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.33794 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("gun/Position2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.998765 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -277.414, 2.22424 ) ]
 }
 
 [sub_resource type="Animation" id=15]
@@ -434,6 +723,54 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( -26.4519, 59.898 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("gun/Sprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.834525 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gun/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.583566 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -119.901, 13.8823 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gun/Sprite:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.583566 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.33794 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("gun/Position2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.416544 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -41.3181, 4.73001 ) ]
+}
 
 [sub_resource type="Animation" id=16]
 
@@ -475,6 +812,54 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( -10.9508, 59.123 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("gun/Sprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.82768 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gun/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.82768 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -90.8344, -49.9759 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gun/Sprite:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.82768 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -86.0415 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("gun/Position2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.499405 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -95.4234, -123.063 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=17]
@@ -608,12 +993,12 @@ tracks/1/keys = {
 }
 
 [node name="player" type="KinematicBody2D" groups=[
-"actors",
 "player",
 "Persistant",
+"actors",
 ]]
 
-modulate = Color( 0.988281, 0.979233, 0.965118, 1 )
+modulate = Color( 0.988281, 0.949677, 0.949677, 1 )
 self_modulate = Color( 0.96875, 0.915771, 0.915771, 1 )
 position = Vector2( 121.763, 100.52 )
 scale = Vector2( 0.34, 0.34 )
@@ -622,7 +1007,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause", "Transform" ]
+_sections_unfolded = [ "Pause", "Transform", "Visibility", "collision" ]
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -630,13 +1015,12 @@ __meta__ = {
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0.960938, 0.945923, 0.945923, 1 )
 material = SubResource( 2 )
-position = Vector2( -13.5261, 3.522 )
+position = Vector2( -13.5261, 3.52197 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 7
-frame = 16
+frame = 2
 region_rect = Rect2( 344, 29, 142, 111 )
 _sections_unfolded = [ "Animation", "Material", "Region", "Visibility" ]
 
@@ -717,10 +1101,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="torch" parent="." index="5" instance=ExtResource( 3 )]
 
-editor/display_folded = true
-position = Vector2( -11.8181, 112.324 )
-rotation = 1.5708
-scale = Vector2( 0.66021, 0.393656 )
+position = Vector2( 75.116, 11.124 )
+scale = Vector2( 0.904593, 0.658617 )
 offset = Vector2( 200, 0 )
 _sections_unfolded = [ "Shadow", "Transform" ]
 
@@ -740,7 +1122,7 @@ blend_times = [  ]
 [node name="DustWalk" parent="." index="6" instance=ExtResource( 4 )]
 
 modulate = Color( 0.980469, 0.964836, 0.942169, 1 )
-position = Vector2( -8.62558, 54.4726 )
+position = Vector2( -10.9508, 59.123 )
 scale = Vector2( 0.0445342, 0.078208 )
 emitting = true
 one_shot = false
@@ -754,4 +1136,28 @@ position = Vector2( -13.0087, 4.50266 )
 scale = Vector2( 2.70165, 3.61611 )
 _sections_unfolded = [ "Drawing", "Material", "Process Material", "Visibility" ]
 
+[node name="gun" parent="." index="8" instance=ExtResource( 6 )]
 
+visible = false
+position = Vector2( 80.4446, 33.701 )
+scale = Vector2( 0.523799, 0.685464 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite" parent="gun" index="0"]
+
+position = Vector2( -90.8344, -49.9759 )
+rotation = -1.50171
+flip_h = true
+_sections_unfolded = [ "Material", "Offset", "Transform" ]
+
+[node name="CollisionShape2D" parent="gun" index="1"]
+
+disabled = true
+
+[node name="Position2D" type="Position2D" parent="gun" index="2"]
+
+position = Vector2( -95.4234, -123.063 )
+_sections_unfolded = [ "Transform" ]
+
+
+[editable path="gun"]

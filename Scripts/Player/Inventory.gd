@@ -4,6 +4,8 @@ const ItemSlotClass = preload("ItemSlot.gd")
 
 
 var index = 0
+var id = 0
+var list = 0;
 
 const slotTexture = preload("res://Images/square.png")
 const itemImages = [
@@ -17,26 +19,26 @@ const itemImages = [
 
 const itemDictionary = {
 	0: {
-		"itemName": "Baguette",
+		"itemName": "baguette",
 		"itemIcon": itemImages[0]
 	},
 	1: {
-		"itemName": "OxygenTank",
+		"itemName": "tank",
 		"itemIcon": itemImages[2]
 	},
 	2: {
-		"itemName": "Radar",
+		"itemName": "radar",
 		"itemIcon": itemImages[3]
 	},
 	
 	3: {
 		
-		"itemName": "Rocket Booster",
+		"itemName": "booster",
 		"itemIcon": itemImages[4]
 	},
 	
 	4: {
-		"itemName": "flux capacitor",
+		"itemName": "flux",
 		"itemIcon": itemImages[5]
 	},
 	
@@ -58,56 +60,95 @@ func _ready():
 	
 	Global.Inventory = self
 	
-	for item in itemDictionary:
-		var itemName = itemDictionary[item].itemName
-		var itemIcon = itemDictionary[item].itemIcon
+	#for item in itemDictionary:
 		
-		var id = 0
 		
-		itemList.append(ItemClass.new(itemName, itemIcon, null))
+		#var itemName = itemDictionary[item].itemName
+		#var itemIcon = itemDictionary[item].itemIcon
+		
+		
+	
+		
+		#itemList.append(ItemClass.new(id,itemName, itemIcon, null))
+		#id+=1
+		#print(str(id))
 	
 	for i in range(20):
 		var slot = ItemSlotClass.new(i)
 		slotList.append(slot)
 		add_child(slot)
 
-
-
-func removeItem():
-	index-=1
-	
 func addItem(name):
 	
-	var id = 0
+	id+=1
+	
+	
+	for i in range(0,slotList.size()):
+		
+		
+	
+		
+		if slotList[i].item == null:
 			
-	if name == "baguette":
-		slotList[index].setItem(itemList[0])
-		index+=1
+		
+			
+			print(slotList[i])
+			
+			
+			
+			if name == "baguette":
+				slotList[i].setItem(ItemClass.new(id,"baguette", itemImages[0], null))
+				break
 
-
-	elif name == "tank":
-		slotList[index].setItem(itemList[1])
-		index+=1
+			elif name == "tank":
+				slotList[i].setItem(ItemClass.new(id,"tank", itemImages[2], null))
+				break
 		
 		
-	elif name == "radar":
-		slotList[index].setItem(itemList[2])
-		index+=1
+			elif name == "radar":
+				slotList[i].setItem(ItemClass.new(id,"radar", itemImages[3], null))
+				break
 		
 	
-	elif name == "booster":
-		slotList[index].setItem(itemList[3])
-		index+=1
+			elif name == "booster":
+				slotList[i].setItem(ItemClass.new(id,"booster", itemImages[4], null))
+				break
 
 	
-	elif name == "flux":
-		 slotList[index].setItem(itemList[4])
-		 index+=1
+			elif name == "flux":
+		 		slotList[i].setItem(ItemClass.new(id,"flux", itemImages[5], null))
+			  break
+				
 		 
 		
-	elif name == "hydrogenTank":
-		slotList[index].setItem(itemList[5])
-		index+=1						
+			elif name == "hydrogenTank":
+				slotList[i].setItem(ItemClass.new(id,"hydrogenTank", itemImages[1], null))
+				break
+				
+		
+			
+	 
+			
+			
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+				
 			
 	
 
@@ -127,11 +168,11 @@ func _gui_input(event):
 				clickedSlot = slot
 				
 				if clickedSlot.item != null:
-					if clickedSlot.item.name == "Baguette":				
+					if clickedSlot.item.name == "baguette":				
 						clickedSlot.useItem()
 						Global.Player.heal_lp(20)
 					    	
-					elif clickedSlot.item.name == 	"OxygenTank":
+					elif clickedSlot.item.name == 	"tank":
 						clickedSlot.useItem()
 						Global.Player.gain_o2(20)
 					   	

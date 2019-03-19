@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/painting_parasol.jpg-dd5ff43781833c9d95fcf12ce11b6099.stex"
+path="res://.import/laserGreen10.png-7f14af437a1610b6d2f04373e88b8db2.stex"
 
 [deps]
 
-source_file="res://loading screen/painting_parasol.jpg"
-dest_files=[ "res://.import/painting_parasol.jpg-dd5ff43781833c9d95fcf12ce11b6099.stex" ]
+source_file="res://Images/laserGreen10.png"
+dest_files=[ "res://.import/laserGreen10.png-7f14af437a1610b6d2f04373e88b8db2.stex" ]
 
 [params]
 

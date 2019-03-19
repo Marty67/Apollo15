@@ -21,15 +21,6 @@ func setItem(newItem):
 	item.itemSlot = self;
 	print(str(item))
 
-			
-	
-		
-	
-
-
-	
 func useItem():
-	item.useItem();
-	remove_child(item);
+	remove_child(item)
 	item = null;
-	Global.Inventory.removeItem()

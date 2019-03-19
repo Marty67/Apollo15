@@ -35,7 +35,7 @@ func body_entered(body):
 func _physics_process(delta):
 	
 	if damage_player == true:
-		Global.Player.take_damage(0.1)
+		Global.Player.take_damage(0.5)
 		Global.Player.burn()
 		
 		

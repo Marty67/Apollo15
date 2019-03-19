@@ -1,8 +1,9 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Aliens/boss.gd" type="Script" id=1]
-[ext_resource path="res://particles/aura.shader" type="Shader" id=2]
+[ext_resource path="res://aura.shader" type="Shader" id=2]
 [ext_resource path="res://Scenes/Sprites/Aliens/Mutated Emily Big.png" type="Texture" id=3]
+
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -17,14 +18,14 @@ shader_param/aura_width = 3.0
 shader_param/aura_color = Color( 0, 0.226563, 0.088501, 1 )
 _sections_unfolded = [ "shader_param" ]
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=3]
 
 resource_name = "charge"
 length = 1.0
 loop = false
 step = 0.1
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
 length = 1.0
 loop = false
@@ -42,9 +43,8 @@ tracks/0/keys = {
 "values": [ 5, 11 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 
-resource_name = "hit"
 length = 1.0
 loop = false
 step = 0.1
@@ -61,7 +61,7 @@ tracks/0/keys = {
 "values": [ Color( 0.00987172, 0.507813, 0.00595093, 1 ), Color( 0.0173445, 0.40625, 0.0142822, 1 ), Color( 0.0173445, 0.40625, 0.0142822, 1 ), Color( 0.919878, 0.953125, 0.919617, 1 ), Color( 0.0195187, 0.558594, 0.015274, 1 ), Color( 0.91988, 0.972656, 0.919464, 1 ), Color( 0.0269232, 0.578125, 0.022583, 1 ), Color( 0.0269232, 0.578125, 0.022583, 1 ), Color( 0.942317, 0.988281, 0.941956, 1 ), Color( 0.0279815, 0.554688, 0.0238342, 1 ), Color( 0.897623, 0.941406, 0.897278, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 
 length = 1.0
 loop = true
@@ -91,7 +91,7 @@ tracks/1/keys = {
 "values": [ Color( 0.970206, 0.980469, 0.953659, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
 length = 1.0
 loop = true
@@ -109,7 +109,7 @@ tracks/0/keys = {
 "values": [ 6 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 
 length = 1.0
 loop = true
@@ -127,7 +127,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 
 length = 1.0
 loop = true
@@ -145,26 +145,38 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=10]
 
 resource_name = "ready"
 length = 1.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 0.942078, 0.957031, 0.945115, 1 ) ]
+"values": [ Color( 0.927449, 0.964844, 0.927155, 1 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=11]
 
 resource_name = "transform"
 length = 1.5
@@ -177,76 +189,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 5, 5 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 2.6, 2.6 ), Vector2( 2.4, 2.4 ), Vector2( 2.6, 2.6 ), Vector2( 2.8, 2.8 ), Vector2( 3.5, 3.5 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
+tracks/1/path = NodePath("sprite:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.8, 1.1, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.8, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.0210114, 0.597656, 0.138142, 1 ), Color( 0.0211487, 0.492188, 0.116828, 1 ), Color( 0.0210114, 0.597656, 0.138142, 1 ) ]
-}
-
-[sub_resource type="Animation" id=9]
-
-length = 1.0
-loop = true
-step = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 8, 11 ]
-}
-
-[sub_resource type="Animation" id=10]
-
-length = 1.0
-loop = true
-step = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 9, 3 ]
-}
-
-[sub_resource type="Animation" id=11]
-
-length = 1.0
-loop = true
-step = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 4, 7 ]
+"values": [ Color( 0.897623, 0.941406, 0.897278, 1 ), Color( 0.651907, 0.914063, 0.649841, 1 ), Color( 0.281006, 0.941406, 0.275803, 1 ), Color( 0.0614497, 0.660156, 0.0567322, 1 ), Color( 0.0549184, 0.566406, 0.0508881, 1 ) ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -264,15 +222,69 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
+"values": [ 8, 11 ]
+}
+
+[sub_resource type="Animation" id=13]
+
+length = 1.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 9, 3 ]
+}
+
+[sub_resource type="Animation" id=14]
+
+length = 1.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 7 ]
+}
+
+[sub_resource type="Animation" id=15]
+
+length = 1.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
 "values": [ 2, 10 ]
 }
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=16]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7, 8 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=17]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8, 9.32753 )
@@ -282,20 +294,19 @@ extents = Vector2( 8, 9.32753 )
 modulate = Color( 0.942078, 0.957031, 0.945115, 1 )
 material = SubResource( 1 )
 position = Vector2( 948.715, 68.6884 )
-scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0.897623, 0.941406, 0.897278, 1 )
+modulate = Color( 0.927449, 0.964844, 0.927155, 1 )
 material = SubResource( 2 )
 position = Vector2( 8.33301, 37.8521 )
 scale = Vector2( 0.5, 0.5 )
@@ -312,19 +323,19 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 2.0
-anims/charge = SubResource( 15 )
-anims/down = SubResource( 3 )
-anims/hit = SubResource( 4 )
-anims/idledown = SubResource( 5 )
-anims/idleleft = SubResource( 6 )
-anims/idleright = SubResource( 7 )
-anims/idleup = SubResource( 8 )
-anims/ready = SubResource( 17 )
-anims/transform = SubResource( 16 )
-anims/walkdown = SubResource( 9 )
-anims/walkleft = SubResource( 10 )
-anims/walkright = SubResource( 11 )
-anims/walkup = SubResource( 12 )
+anims/charge = SubResource( 3 )
+anims/down = SubResource( 4 )
+anims/hit = SubResource( 5 )
+anims/idledown = SubResource( 6 )
+anims/idleleft = SubResource( 7 )
+anims/idleright = SubResource( 8 )
+anims/idleup = SubResource( 9 )
+anims/ready = SubResource( 10 )
+anims/transform = SubResource( 11 )
+anims/walkdown = SubResource( 12 )
+anims/walkleft = SubResource( 13 )
+anims/walkright = SubResource( 14 )
+anims/walkup = SubResource( 15 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
@@ -333,7 +344,7 @@ _sections_unfolded = [ "Playback Options" ]
 visible = false
 position = Vector2( 5.11522, 43.8651 )
 scale = Vector2( 6.36638, 8.33961 )
-shape = SubResource( 13 )
+shape = SubResource( 16 )
 
 [node name="hitbox" type="Area2D" parent="." index="3"]
 
@@ -350,23 +361,29 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" index="0"]
 
+visible = false
 position = Vector2( 0.0537262, -0.981756 )
 scale = Vector2( 2.27408, 2.37236 )
-shape = SubResource( 14 )
+shape = SubResource( 17 )
 
-[node name="mouth" type="Position2D" parent="." index="4"]
+[node name="hand1" type="Position2D" parent="." index="4"]
 
-position = Vector2( 5.82326, 60.0711 )
+position = Vector2( -25.2361, 72.3654 )
 _sections_unfolded = [ "Material" ]
 
-[node name="Timer" type="Timer" parent="." index="5"]
+[node name="hand2" type="Position2D" parent="." index="5"]
+
+position = Vector2( 38.8237, 73.0125 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Timer" type="Timer" parent="." index="6"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
 
-[node name="transformTimer" type="Timer" parent="." index="6"]
+[node name="transformTimer" type="Timer" parent="." index="7"]
 
 process_mode = 1
 wait_time = 5.0
