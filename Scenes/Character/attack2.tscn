@@ -994,8 +994,8 @@ tracks/1/keys = {
 
 [node name="player" type="KinematicBody2D" groups=[
 "player",
-"actors",
 "Persistant",
+"actors",
 ]]
 
 modulate = Color( 0.988281, 0.949677, 0.949677, 1 )
@@ -1149,6 +1149,10 @@ position = Vector2( -90.8344, -49.9759 )
 rotation = -1.50171
 flip_h = true
 _sections_unfolded = [ "Material", "Offset", "Transform" ]
+
+[node name="CollisionShape2D" parent="gun" index="1"]
+
+disabled = true
 
 [node name="Position2D" type="Position2D" parent="gun" index="2"]
 

@@ -12,7 +12,10 @@ var movetimer = 0 #timer intiliazed to zero deciding how long to walk randomly  
 
 
 
-func _ready(): # method is called when first loaded sets alien direction to a random direction and intiliazes speed to 40.
+func _ready():
+	shot()
+	                                 # method is called when first loaded sets alien direction to a random direction and intiliazes speed to 40.
+   
 	movedir = dir.rand()
 	speed = 40
 	Global.Alien = self
@@ -54,6 +57,12 @@ func move_to_player(): #this function makes alien follow player by first moving 
 func take_damage(damage):
 	health-=damage
 	
+func shot():
+	$anim.play("shot")
+	
+func normal():
+	$anim.play("normal")	
+	
 	
 func _physics_process(delta): # everything in this function is a loop. so everything excecuted constantly.
 	movement_loop()
@@ -75,10 +84,7 @@ func _physics_process(delta): # everything in this function is a loop. so everyt
 		
 		if distance_2_player <=150:  # if player is really close to alien then alien will speed up drastically.
 			speed = 250
-			
-			
-	if health <= 0:
-		queue_free()		
+					
 		
 			
 			

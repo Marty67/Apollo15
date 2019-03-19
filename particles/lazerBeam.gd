@@ -8,6 +8,7 @@ var speed_y = 5
 
 func _ready():
 	Global.Lazer = self
+	connect("body_entered",self,"body_entered")
 
 func set_position(x,y):
 	speed_x = x
@@ -25,17 +26,19 @@ func _physics_process(delta):
 	
 
 	
-#
-#func _on_lazer_body_entered(body):
-#
-#	if body.name == "alien" or body.name =="BOSS":
-#		body.take_damage(5)
-#		self.queue_free()
-#		#body.get_node("sprite").modulate = Color8(255,0,0)
-		
+
+func body_entered(body):
+
+	for alien in get_tree().get_nodes_in_group("aliens"):
+		if body == alien:
+			body.take_damage(5)
+			self.queue_free()
+			body.shot()
+			
+			#body.normal()
+			
 
 
-#func _on_lazer_body_exited(body):
-#	if body.name == "alien":
-#		self.queue_free()
+
+	
 	

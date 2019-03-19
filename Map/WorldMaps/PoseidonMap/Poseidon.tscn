@@ -81,7 +81,7 @@ shader_param/velocity = null
 shader_param/intensity = null
 _sections_unfolded = [ "Resource", "shader_param" ]
 
-[node name="Poseidon" type="Node2D" index="0"]
+[node name="Poseidon" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -277,6 +277,8 @@ __meta__ = {
 }
 
 [node name="snow" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
 
 [node name="TextureRect" parent="snow" index="0" instance=ExtResource( 11 )]
 

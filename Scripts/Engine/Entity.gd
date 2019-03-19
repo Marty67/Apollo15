@@ -68,7 +68,7 @@ func damage_loop():
 			var  baguette = preload("res://Items/baguette.tscn").instance() # possible item dropper will be the baguette node
 			get_parent().add_child(death_animation)
 			death_animation.global_transform = global_transform
-			queue_free() # enermy node if removed from queue to make it disappear from the screen
+			queue_free() # enermy node if removed from memory to make it disappear from the screen
 			if dropChance == 3: # if random value is 3, the item baguette will be dropped
 				get_parent().add_child(baguette)
 				baguette.global_transform = global_transform

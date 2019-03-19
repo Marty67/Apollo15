@@ -6,10 +6,10 @@
 [ext_resource path="res://Items/baguette.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Items/radar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Character/Heydies.tscn" type="PackedScene" id=6]
-[ext_resource path="res://torchLight2D.tscn" type="PackedScene" id=7]
+[ext_resource path="res://particles/torchLight2D.tscn" type="PackedScene" id=7]
 [ext_resource path="res://particles/Fog.tscn" type="PackedScene" id=8]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( -0.0374756, 0.637909 )
 

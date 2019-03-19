@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Pickup.gd" type="Script" id=1]
-[ext_resource path="res://particles/aura.shader" type="Shader" id=2]
+[ext_resource path="res://aura.shader" type="Shader" id=2]
 [ext_resource path="res://Images/back lazer.png" type="Texture" id=3]
+
 
 [sub_resource type="ShaderMaterial" id=1]
 

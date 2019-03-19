@@ -20,7 +20,7 @@ onready var player = $player #this gets the player node ready for use.
 
 
 
-func initialize(): # this method removes the instances of player, pause and inventory nodes on the maploader node
+func initialize(): # this method removes the instance of player on the maploader node.
 	remove_child(player)
 
 	
