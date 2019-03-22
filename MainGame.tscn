@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Game/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/maploader.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/OxygenTimer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Invent.tscn" type="PackedScene" id=6]
+[ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=7]
 
 [node name="MainGame" type="Node"]
 
@@ -27,7 +28,18 @@ pause_mode = 2
 
 [node name="Inventory" parent="maploader" index="3" instance=ExtResource( 6 )]
 
+[node name="FadeIn" parent="maploader" index="4" instance=ExtResource( 7 )]
+
+[node name="Timer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 15.0
+one_shot = true
+autostart = false
+
 [connection signal="timeout" from="maploader/OxygenTimer" to="maploader/player" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
 [editable path="maploader/player"]

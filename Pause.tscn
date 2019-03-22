@@ -1,8 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://GameInterface/Pause.gd" type="Script" id=1]
-[ext_resource path="res://title_screen/fonts/bebas_36.tres" type="DynamicFont" id=2]
-[ext_resource path="res://GameInterface/Interface.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Main Menu Resources/Button Textures/Resume - Unsel.png" type="Texture" id=2]
+[ext_resource path="res://Main Menu Resources/Button Textures/Resume - Sel (2).png" type="Texture" id=3]
+[ext_resource path="res://Main Menu Resources/Button Textures/Save Game Unsel.png" type="Texture" id=4]
+[ext_resource path="res://Main Menu Resources/Button Textures/Save Game - Sel.png" type="Texture" id=5]
+[ext_resource path="res://Main Menu Resources/Button Textures/Load Game - Unsel.png" type="Texture" id=6]
+[ext_resource path="res://Main Menu Resources/Button Textures/Load Game - Sel.png" type="Texture" id=7]
+[ext_resource path="res://Main Menu Resources/Button Textures/Main Menu - UnSel.png" type="Texture" id=8]
+[ext_resource path="res://Main Menu Resources/Button Textures/Main Menu - Selected.png" type="Texture" id=9]
+[ext_resource path="res://title_screen/fonts/bebas_36.tres" type="DynamicFont" id=10]
+[ext_resource path="res://GameInterface/Interface.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Images/arcade-font-writer.png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -11,28 +20,7 @@ content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
 
-[sub_resource type="StyleBoxEmpty" id=2]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" index="0"]
 
 layer = 100
 offset = Vector2( 0, 0 )
@@ -77,16 +65,16 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0, 0, 0, 0.558039 )
 
-[node name="resumeBtn" type="Button" parent="UI/Overlay" index="0"]
+[node name="resumeBtn" type="TextureButton" parent="UI/Overlay" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 888.0
-margin_top = 410.0
-margin_right = 986.0
-margin_bottom = 452.0
+margin_left = 881.0
+margin_top = 416.0
+margin_right = 1073.0
+margin_bottom = 448.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -94,27 +82,26 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/normal = SubResource( 1 )
-custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Resume"
-flat = false
-align = 1
-_sections_unfolded = [ "Pause", "custom_fonts", "custom_styles" ]
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+texture_focused = ExtResource( 3 )
+_sections_unfolded = [ "Textures" ]
 
-[node name="saveBtn" type="Button" parent="UI/Overlay" index="1"]
+[node name="saveBtn" type="TextureButton" parent="UI/Overlay" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 885.0
-margin_top = 552.0
-margin_right = 1019.0
-margin_bottom = 594.0
+margin_left = 837.0
+margin_top = 498.0
+margin_right = 1125.0
+margin_bottom = 530.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -122,27 +109,26 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Save Game"
-flat = false
-align = 1
-_sections_unfolded = [ "Pause", "custom_fonts", "custom_styles" ]
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+texture_focused = ExtResource( 5 )
+_sections_unfolded = [ "Textures" ]
 
-[node name="loadBtn" type="Button" parent="UI/Overlay" index="2"]
+[node name="loadBtn" type="TextureButton" parent="UI/Overlay" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 887.0
-margin_top = 484.0
-margin_right = 1021.0
-margin_bottom = 526.0
+margin_left = 834.0
+margin_top = 587.0
+margin_right = 1122.0
+margin_bottom = 619.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -150,27 +136,26 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Load Game"
-flat = false
-align = 1
-_sections_unfolded = [ "Pause", "custom_fonts", "custom_styles" ]
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+texture_focused = ExtResource( 7 )
+_sections_unfolded = [ "Textures" ]
 
-[node name="menuBtn" type="Button" parent="UI/Overlay" index="3"]
+[node name="menuBtn" type="TextureButton" parent="UI/Overlay" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 883.0
-margin_top = 624.0
-margin_right = 1018.0
-margin_bottom = 666.0
+margin_left = 834.0
+margin_top = 676.0
+margin_right = 1122.0
+margin_bottom = 708.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -178,16 +163,15 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Main Menu"
-flat = false
-align = 1
-_sections_unfolded = [ "Visibility", "custom_fonts", "custom_styles" ]
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+texture_focused = ExtResource( 9 )
+_sections_unfolded = [ "Textures" ]
 
 [node name="pauseBtn" type="Button" parent="." index="1"]
 
@@ -206,8 +190,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = ExtResource( 2 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -217,10 +201,18 @@ flat = false
 align = 1
 _sections_unfolded = [ "Visibility", "custom_fonts", "custom_styles" ]
 
-[node name="Interface" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Interface" parent="." index="2" instance=ExtResource( 11 )]
 
-margin_left = -110.0
-margin_right = -940.0
+margin_left = -109.0
+margin_top = -10.0
+margin_right = -939.0
+margin_bottom = -672.0
+
+[node name="complete" type="Sprite" parent="." index="3"]
+
+visible = false
+position = Vector2( 997.82, 213.327 )
+texture = ExtResource( 12 )
 
 [connection signal="pressed" from="UI/Overlay/resumeBtn" to="UI" method="_on_resumeBtn_pressed"]
 

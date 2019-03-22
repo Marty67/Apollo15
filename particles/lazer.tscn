@@ -17,7 +17,7 @@ shader_param/radius = 1.0
 shader_param/modulate = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="lazer" type="Area2D"]
+[node name="lazer" type="Area2D" index="0"]
 
 position = Vector2( 241.963, 514.455 )
 rotation = 3.14159
@@ -41,14 +41,7 @@ position = Vector2( -3.55385, -0.180054 )
 scale = Vector2( 0.943347, 3.00973 )
 shape = SubResource( 1 )
 
-[node name="burnTimer" type="Timer" parent="." index="1"]
-
-process_mode = 1
-wait_time = 2.0
-one_shot = false
-autostart = false
-
-[node name="laserGreen10" type="Sprite" parent="." index="2"]
+[node name="laserGreen10" type="Sprite" parent="." index="1"]
 
 material = SubResource( 2 )
 position = Vector2( -2.50499, -0.286255 )
@@ -78,7 +71,5 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-
-[connection signal="timeout" from="burnTimer" to="." method="_on_burnTimer_timeout"]
 
 

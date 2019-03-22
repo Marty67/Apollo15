@@ -228,7 +228,7 @@ extents = Vector2( 51.2188, 31.0497 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="alien" type="KinematicBody2D" groups=[
+[node name="alien" type="KinematicBody2D" index="0" groups=[
 "aliens",
 ]]
 
@@ -247,6 +247,7 @@ __meta__ = {
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
+modulate = Color( 0.919189, 0.9375, 0.919905, 1 )
 material = SubResource( 3 )
 position = Vector2( -12.7651, 0 )
 scale = Vector2( 1.03192, 1 )
@@ -254,7 +255,7 @@ texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
 frame = 5
-_sections_unfolded = [ "Animation", "Material", "Region" ]
+_sections_unfolded = [ "Animation", "Material", "Region", "Visibility" ]
 
 [node name="anim" type="AnimationPlayer" parent="." index="1"]
 

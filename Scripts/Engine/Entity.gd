@@ -14,13 +14,16 @@ var spritedir = "down"
 
 var hitstun = 0 
 var health = MAXHEALTH
-#var texture_default = null
+var texture_default = null
+var texture_hurt = null
 
 
 
+func _ready():
+	 
+	texture_default = $sprite.texture  # display normal sprite and animation while walking and idle
+	texture_hurt = load($sprite.texture.get_path().replace(".png","_hurt.png")) 
 
-	#texture_default = $sprite.texture # display normal sprite and animation while walking and idle
-	 #get_node("sprite").modulate = Color8(255,255,255) # when there is overlapping bodies, shoulget_node("sprite").modulate = Color8(255,255,255)d display death animation
 
 func movement_loop():
 	var motion
@@ -53,14 +56,11 @@ func damage_loop():
 	
 	if hitstun > 0: # if enemy or player is hit, the texture_hurt is replace with current texture
 		hitstun -= 1	
-		#$sprite.texture = texture_hurt
-		get_node("sprite").modulate = Color8(255,0,0)
+		$sprite.texture = texture_hurt
+		
 	else: # if player is not hit, normal texture is displayed
-		#$sprite.texture = texture_default
-		
-		get_node("sprite").modulate = Color8(255,255,255)
-		
-			
+		$sprite.texture = texture_default
+	
 		
 		
 		if TYPE  == "ENEMY" and health <=0: # if the type of the node is enemy and health has reached 0, death animation for enemy will play

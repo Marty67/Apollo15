@@ -18,6 +18,8 @@ func _on_TextureButton2_pressed():
 	button_sfx()
 	get_tree().quit() # when quit button has been pressed, close the scene
 	
+
+
 func button_sfx(): # sound played for when button is pressed in main menu
 	var musicPlayer = AudioStreamPlayer.new()
 	self.add_child(musicPlayer)

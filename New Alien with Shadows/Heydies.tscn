@@ -184,7 +184,7 @@ extents = Vector2( 45.9818, 31.0497 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="alien" type="KinematicBody2D" index="0"]
+[node name="alien" type="KinematicBody2D"]
 
 position = Vector2( 522.412, 296.659 )
 scale = Vector2( 0.34, 0.34 )
@@ -193,7 +193,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }

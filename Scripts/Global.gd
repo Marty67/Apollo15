@@ -18,11 +18,11 @@ var Baguette
 var fireball2
 var Lazer
  
-func _ready():  # this function is called once  
-	var musicPlayer = AudioStreamPlayer.new()
-	self.add_child(musicPlayer)
-	musicPlayer.stream  = load("res://Purple Planet Music - Cinematic - Battle Plan.wav")
-	musicPlayer.play() # this plays music and the music keeps playing even when switching scenes.
+#func _ready():  # this function is called once  
+#	var musicPlayer = AudioStreamPlayer.new()
+#	self.add_child(musicPlayer)
+#	musicPlayer.stream  = load("res://Purple Planet Music - Cinematic - Battle Plan.wav")
+#	musicPlayer.play() # this plays music and the music keeps playing even when switching scenes.
 	
 
 	

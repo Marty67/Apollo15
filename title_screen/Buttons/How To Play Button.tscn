@@ -4,6 +4,6 @@
 
 [node name="How To Play Button" instance=ExtResource( 1 )]
 
-scene_to_load = "res://Scenes/Tutorial_Loader.tscn"
+scene_to_load = "res://Map/World1/WorldMaps/MainCave.tscn"
 
 

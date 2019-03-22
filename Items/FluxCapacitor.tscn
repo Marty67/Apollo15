@@ -18,7 +18,7 @@ _sections_unfolded = [ "shader_param" ]
 custom_solver_bias = 0.0
 extents = Vector2( 10, 12.2649 )
 
-[node name="Area2D" type="Area2D" index="0"]
+[node name="Area2D" type="Area2D"]
 
 position = Vector2( 487.345, 395.786 )
 scale = Vector2( 7.22876, 7.98556 )

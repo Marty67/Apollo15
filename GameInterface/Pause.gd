@@ -62,3 +62,4 @@ func _on_pauseBtn_pressed(): # event for when pause button has been pressed agai
 	var new_pause_state = not get_tree().paused
 	get_tree().paused = new_pause_state
 	visible = new_pause_state
+

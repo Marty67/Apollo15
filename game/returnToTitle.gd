@@ -2,6 +2,9 @@ extends Control
 
 var scene_path_to_load
 
+func ready():
+	$parallax_background/menu_layer/button_options/TutorialButton.grab_focus()
+	
 func _on_TextureButton_pressed():
 	var buttonPlayer = AudioStreamPlayer.new()
 	self.add_child(buttonPlayer)

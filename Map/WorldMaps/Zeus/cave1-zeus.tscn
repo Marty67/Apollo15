@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Items/RocketBooster.tscn" type="PackedScene" id=6]
 
-[node name="Node2D" type="Node2D"]
+[node name="zeus-cave1" type="Node2D" index="0"]
 
 __meta__ = {
 "_edit_group_": true,
@@ -91,7 +91,7 @@ next_map = "res://Map/WorldMaps/Zeus/Zeus.tscn"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="4"]
 
-color = Color( 0.144558, 0.143677, 0.171875, 1 )
+color = Color( 0.169762, 0.169189, 0.1875, 1 )
 
 [node name="rocket booster" parent="." index="5" instance=ExtResource( 6 )]
 

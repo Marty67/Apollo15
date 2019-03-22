@@ -9,9 +9,12 @@
 [ext_resource path="res://particles/torchLight2D.tscn" type="PackedScene" id=7]
 [ext_resource path="res://particles/Fog.tscn" type="PackedScene" id=8]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( -0.0374756, 0.637909 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Node2D" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -47,6 +50,7 @@ position = Vector2( 1960.04, 169.362 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
 
+visible = false
 position = Vector2( -23.8328, -0.397217 )
 color = Color( 0.00598145, 0.0219164, 0.191406, 1 )
 

@@ -80,7 +80,7 @@ extents = Vector2( 8.97842, 10 )
 
 [node name="icon" type="Sprite" parent="." index="0"]
 
-modulate = Color( 0.490196, 0.976471, 1, 1 )
+modulate = Color( 0.968994, 1, 0.0078125, 1 )
 material = SubResource( 2 )
 position = Vector2( 1032.01, 537.422 )
 rotation = 1.58614

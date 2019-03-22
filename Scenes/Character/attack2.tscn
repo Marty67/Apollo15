@@ -887,7 +887,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 90.0 ]
+"values": [ -269.642 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:position")
@@ -899,7 +899,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -11.8181, 112.324 ) ]
+"values": [ Vector2( -12.0958, 192.203 ) ]
 }
 
 [sub_resource type="Animation" id=20]
@@ -917,7 +917,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 180.0 ]
+"values": [ -179.199 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:position")
@@ -929,7 +929,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -101.266, 38.1019 ) ]
+"values": [ Vector2( -144.806, 39.045 ) ]
 }
 
 [sub_resource type="Animation" id=21]
@@ -947,7 +947,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ -360.077 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:position")
@@ -959,7 +959,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 81.6487, 31.1263 ) ]
+"values": [ Vector2( 114.822, 31.6852 ) ]
 }
 
 [sub_resource type="Animation" id=22]
@@ -968,7 +968,7 @@ length = 1.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -977,10 +977,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -12.7695, -100.828 ) ]
+"values": [ -89.9862 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -989,7 +989,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -90.0 ]
+"values": [ Vector2( -10.1446, -168.778 ) ]
 }
 
 [node name="player" type="KinematicBody2D" groups=[
@@ -1020,7 +1020,6 @@ position = Vector2( -13.5261, 3.52197 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 7
-frame = 2
 region_rect = Rect2( 344, 29, 142, 111 )
 _sections_unfolded = [ "Animation", "Material", "Region", "Visibility" ]
 
@@ -1101,8 +1100,9 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="torch" parent="." index="5" instance=ExtResource( 3 )]
 
-position = Vector2( 75.116, 11.124 )
-scale = Vector2( 0.904593, 0.658617 )
+position = Vector2( -10.1446, -168.778 )
+rotation = -1.57056
+scale = Vector2( 1.04284, 0.856015 )
 offset = Vector2( 200, 0 )
 _sections_unfolded = [ "Shadow", "Transform" ]
 
@@ -1124,7 +1124,6 @@ blend_times = [  ]
 modulate = Color( 0.980469, 0.964836, 0.942169, 1 )
 position = Vector2( -10.9508, 59.123 )
 scale = Vector2( 0.0445342, 0.078208 )
-emitting = true
 one_shot = false
 
 [node name="Fire" parent="." index="7" instance=ExtResource( 5 )]
@@ -1156,7 +1155,7 @@ disabled = true
 
 [node name="Position2D" type="Position2D" parent="gun" index="2"]
 
-position = Vector2( -95.4234, -123.063 )
+position = Vector2( -93.784, -111.787 )
 _sections_unfolded = [ "Transform" ]
 
 

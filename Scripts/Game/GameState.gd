@@ -1,8 +1,8 @@
 extends Node
 
 onready var map_loader = $maploader
-onready var inventory = $maploader/Inventory/Inventory
 onready var tree = get_tree()
+var timer
 
 
 #var spawned = []
@@ -12,7 +12,8 @@ onready var tree = get_tree()
 func _ready():
 	Global.GameState = self #this makes this script global so this script can be acessed from anywhere.
 	
-	map_loader.initialize() 
+	map_loader.initialize()
+	timer = get_node("Timer")
 	
 	
 	# this loops through the doors in the array which is returned my get_doors() function in maploader script.
@@ -21,7 +22,14 @@ func _ready():
 	for door in map_loader.get_doors():   
 		door.connect("player_entered", self, "_on_Door_player_entered")
 		
-#
+		
+func _physics_process(delta):
+	
+	if Global.Player.get_components() == 4:
+		$maploader/Interface/complete.show()
+		Global.Player.reset_components()
+		timer.start()
+		
 #func addAlien():
 #	spawned.append(1)
 #
@@ -42,3 +50,9 @@ func change_map(scene_path):
 	tree.paused = false		 #resumes processing after map has been changed.
 	
 
+
+
+func _on_Timer_timeout():
+	$maploader/Interface/complete.hide()
+	print("timeout")
+	timer.stop()

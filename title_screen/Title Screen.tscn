@@ -1,26 +1,33 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://title_screen/Title Screen.gd" type="Script" id=1]
-[ext_resource path="res://Main Menu Resources/space_stars_sky_night_116649_1280x720.jpg" type="Texture" id=2]
-[ext_resource path="res://Main Menu Resources/Earth Icon.png" type="Texture" id=3]
-[ext_resource path="res://Main Menu Resources/Moon Texture.png" type="Texture" id=4]
-[ext_resource path="res://Main Menu Resources/Characters.png" type="Texture" id=5]
-[ext_resource path="res://title_screen/Buttons/NewGameBut.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Main Menu Resources/New Game - Unselected.png" type="Texture" id=7]
-[ext_resource path="res://Main Menu Resources/New Game - Selected.png" type="Texture" id=8]
-[ext_resource path="res://title_screen/Buttons/ContinueBut.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Main Menu Resources/Continue Game unselected.png" type="Texture" id=10]
-[ext_resource path="res://Main Menu Resources/Continue Game Selected.png" type="Texture" id=11]
-[ext_resource path="res://title_screen/Buttons/How To Play Button.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Main Menu Resources/How to PLay - Unselected.png" type="Texture" id=13]
-[ext_resource path="res://Main Menu Resources/How to play - Selected.png" type="Texture" id=14]
-[ext_resource path="res://title_screen/Buttons/SettingsBut.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Main Menu Resources/Settings - Unselected.png" type="Texture" id=16]
-[ext_resource path="res://Main Menu Resources/Settings selected.png" type="Texture" id=17]
-[ext_resource path="res://FadeIn.tscn" type="PackedScene" id=18]
+[ext_resource path="res://FadeIn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main Menu Resources/galaxy background.jpg" type="Texture" id=3]
+[ext_resource path="res://Main Menu Resources/Zuice (RM).png" type="Texture" id=4]
+[ext_resource path="res://Main Menu Resources/Haydies.png" type="Texture" id=5]
+[ext_resource path="res://Main Menu Resources/Picydon.png" type="Texture" id=6]
+[ext_resource path="res://title_screen/camera.gd" type="Script" id=7]
+[ext_resource path="res://Main Menu Resources/Overlay1.png" type="Texture" id=8]
+[ext_resource path="res://Main Menu Resources/apollotext.png" type="Texture" id=9]
+[ext_resource path="res://title_screen/Buttons/NewGameBut.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Main Menu Resources/New Game - Unselected.png" type="Texture" id=11]
+[ext_resource path="res://Main Menu Resources/New Game - Selected.png" type="Texture" id=12]
+[ext_resource path="res://title_screen/Buttons/ContinueBut.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Main Menu Resources/Continue Game unselected.png" type="Texture" id=14]
+[ext_resource path="res://Main Menu Resources/Continue Game Selected.png" type="Texture" id=15]
+[ext_resource path="res://title_screen/Buttons/How To Play Button.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Main Menu Resources/How to PLay - Unselected.png" type="Texture" id=17]
+[ext_resource path="res://Main Menu Resources/How to play - Selected.png" type="Texture" id=18]
+[ext_resource path="res://title_screen/Buttons/SettingsBut.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Main Menu Resources/Settings - Unselected.png" type="Texture" id=20]
+[ext_resource path="res://Main Menu Resources/Settings selected.png" type="Texture" id=21]
+[ext_resource path="res://Main Menu Resources/Quit Unselected.png" type="Texture" id=22]
+[ext_resource path="res://Main Menu Resources/Quit Selected.png" type="Texture" id=23]
+[ext_resource path="res://title_screen/Quit.gd" type="Script" id=24]
 
 [node name="Title Screen" type="Control" index="0"]
 
+pause_mode = 2
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -36,57 +43,163 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
-[node name="Menu" type="VBoxContainer" parent="." index="0"]
+[node name="FadeIn" parent="." index="0" instance=ExtResource( 2 )]
+
+visible = false
+margin_right = 1457.0
+margin_bottom = 119.0
+
+[node name="parallax_background" type="ParallaxBackground" parent="." index="1"]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="background layer" type="ParallaxLayer" parent="parallax_background" index="0"]
+
+editor/display_folded = true
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 3839, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="galaxy background" type="Sprite" parent="parallax_background/background layer" index="0"]
+
+texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
+
+[node name="Zuice" type="ParallaxLayer" parent="parallax_background" index="1"]
+
+editor/display_folded = true
+motion_scale = Vector2( 3, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 3839, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="zuice planet" type="Sprite" parent="parallax_background/Zuice" index="0"]
+
+position = Vector2( 2591.92, 584.215 )
+scale = Vector2( 1.19078, 1.14029 )
+texture = ExtResource( 4 )
+
+[node name="Haydies" type="ParallaxLayer" parent="parallax_background" index="2"]
+
+editor/display_folded = true
+motion_scale = Vector2( 2, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 3839, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="parallax_background/Haydies" index="0"]
+
+position = Vector2( 1900.63, 288.684 )
+scale = Vector2( 0.939233, 0.89682 )
+texture = ExtResource( 5 )
+
+[node name="Picydon" type="ParallaxLayer" parent="parallax_background" index="3"]
+
+editor/display_folded = true
+motion_scale = Vector2( 1.5, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 3839, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="parallax_background/Picydon" index="0"]
+
+position = Vector2( 1315.89, 896.586 )
+scale = Vector2( 0.652977, 0.636787 )
+texture = ExtResource( 6 )
+
+[node name="camera" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+script = ExtResource( 7 )
+
+[node name="Canvas_Menu" type="CanvasLayer" parent="." index="3"]
+
+editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Title_Overlay" type="Sprite" parent="Canvas_Menu" index="0"]
+
+position = Vector2( 922.897, 180.076 )
+scale = Vector2( 0.615915, 0.211897 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Canvas_Menu" index="1"]
+
+position = Vector2( 919.757, 157.303 )
+texture = ExtResource( 9 )
+
+[node name="Overlay2" type="Sprite" parent="Canvas_Menu" index="2"]
+
+position = Vector2( 215.974, 541.352 )
+scale = Vector2( 0.224794, 0.255767 )
+texture = ExtResource( 8 )
+
+[node name="Menu" type="VBoxContainer" parent="Canvas_Menu" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
+anchor_right = 1.0
 anchor_bottom = 0.0
-margin_left = 120.0
-margin_top = 80.0
-margin_right = 1160.0
-margin_bottom = 640.0
+margin_left = 15.0
+margin_right = 1853.0
+margin_bottom = 1083.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Margin" ]
+alignment = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="space_stars_sky_night_116649_1280x720" type="Sprite" parent="Menu" index="0"]
-
-position = Vector2( 522.309, 280.117 )
-texture = ExtResource( 2 )
-
-[node name="Earth Icon" type="Sprite" parent="Menu" index="1"]
-
-position = Vector2( 606.615, 81.0035 )
-scale = Vector2( 0.571127, 0.586856 )
-texture = ExtResource( 3 )
-
-[node name="Moon Texture" type="Sprite" parent="Menu" index="2"]
-
-position = Vector2( 759.596, 537.041 )
-scale = Vector2( 0.842299, 0.551655 )
-texture = ExtResource( 4 )
-
-[node name="Characters" type="Sprite" parent="Menu" index="3"]
-
-position = Vector2( 726.48, 473.066 )
-scale = Vector2( 0.524352, 0.497892 )
-texture = ExtResource( 5 )
-
-[node name="CenterRow" type="HBoxContainer" parent="Menu" index="4"]
+[node name="CenterRow" type="HBoxContainer" parent="Canvas_Menu/Menu" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1040.0
-margin_bottom = 560.0
+margin_right = 3758.0
+margin_bottom = 1083.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -94,16 +207,16 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
 alignment = 0
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Margin", "Size Flags" ]
 
-[node name="MainButtons" type="VBoxContainer" parent="Menu/CenterRow" index="0"]
+[node name="MainButtons" type="VBoxContainer" parent="Canvas_Menu/Menu/CenterRow" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1040.0
-margin_bottom = 560.0
+margin_right = 3758.0
+margin_bottom = 1083.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -112,42 +225,73 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 16
 alignment = 1
-_sections_unfolded = [ "Size Flags", "custom_constants" ]
+_sections_unfolded = [ "Anchor", "Size Flags", "custom_constants" ]
 
-[node name="NewGameBut" parent="Menu/CenterRow/MainButtons" index="0" instance=ExtResource( 6 )]
+[node name="NewGameBut" parent="Canvas_Menu/Menu/CenterRow/MainButtons" index="0" instance=ExtResource( 10 )]
 
-margin_top = 192.0
-margin_bottom = 224.0
-texture_normal = ExtResource( 7 )
-texture_hover = ExtResource( 8 )
+margin_top = 453.0
+margin_right = 3758.0
+margin_bottom = 485.0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
 scene_to_load = "res://MainGame.tscn"
 
-[node name="ContinueBut" parent="Menu/CenterRow/MainButtons" index="1" instance=ExtResource( 9 )]
+[node name="ContinueBut" parent="Canvas_Menu/Menu/CenterRow/MainButtons" index="1" instance=ExtResource( 13 )]
 
-margin_top = 240.0
-margin_bottom = 272.0
-texture_normal = ExtResource( 10 )
-texture_hover = ExtResource( 11 )
+margin_top = 501.0
+margin_right = 3758.0
+margin_bottom = 533.0
+texture_normal = ExtResource( 14 )
+texture_hover = ExtResource( 15 )
 
-[node name="How To Play Button" parent="Menu/CenterRow/MainButtons" index="2" instance=ExtResource( 12 )]
+[node name="How To Play Button" parent="Canvas_Menu/Menu/CenterRow/MainButtons" index="2" instance=ExtResource( 16 )]
 
-margin_top = 288.0
-margin_bottom = 320.0
-texture_normal = ExtResource( 13 )
-texture_hover = ExtResource( 14 )
+margin_top = 549.0
+margin_right = 3758.0
+margin_bottom = 581.0
+texture_normal = ExtResource( 17 )
+texture_hover = ExtResource( 18 )
 scene_to_load = "res://game/HowToPlay.tscn"
 
-[node name="SettingsBut" parent="Menu/CenterRow/MainButtons" index="3" instance=ExtResource( 15 )]
-
-margin_top = 336.0
-margin_bottom = 368.0
-texture_normal = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
-
-[node name="FadeIn" parent="." index="1" instance=ExtResource( 18 )]
+[node name="SettingsBut" parent="Canvas_Menu/Menu/CenterRow/MainButtons" index="3" instance=ExtResource( 19 )]
 
 visible = false
+margin_top = 573.0
+margin_right = 1902.0
+margin_bottom = 605.0
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+
+[node name="Quit" type="TextureButton" parent="Canvas_Menu/Menu/CenterRow/MainButtons" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 597.0
+margin_right = 3758.0
+margin_bottom = 629.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 22 )
+texture_hover = ExtResource( 23 )
+script = ExtResource( 24 )
+_sections_unfolded = [ "Textures" ]
+scene_to_load = "Null"
 
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_TransitionFX_fade_finished"]
+
+[connection signal="mouse_entered" from="Canvas_Menu/Menu/CenterRow/MainButtons/NewGameBut" to="Canvas_Menu/Menu/CenterRow/MainButtons/NewGameBut" method="_on_NewGameBut_mouse_entered"]
+
+[connection signal="pressed" from="Canvas_Menu/Menu/CenterRow/MainButtons/Quit" to="Canvas_Menu/Menu/CenterRow/MainButtons/Quit" method="_on_Quit_pressed"]
 
 

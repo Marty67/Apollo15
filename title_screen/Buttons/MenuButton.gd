@@ -9,3 +9,8 @@ func _on_TutorialButton_pressed():
 	get_tree().change_scene(scene_to_load)
 	
 	
+
+
+func _on_NewGameBut_mouse_entered():
+	
+	pass # replace with function body

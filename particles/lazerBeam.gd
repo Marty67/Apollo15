@@ -9,6 +9,7 @@ var speed_y = 5
 func _ready():
 	Global.Lazer = self
 	connect("body_entered",self,"body_entered")
+	connect("body_exited",self,"body_exited")
 
 func set_position(x,y):
 	speed_x = x
@@ -32,10 +33,23 @@ func body_entered(body):
 	for alien in get_tree().get_nodes_in_group("aliens"):
 		if body == alien:
 			body.take_damage(5)
-			self.queue_free()
-			body.shot()
+			body.modulate = Color8(0,255,0)
 			
 			#body.normal()
+			
+			
+
+func body_exited(body):
+
+	for alien in get_tree().get_nodes_in_group("aliens"):
+		if body == alien:
+			self.queue_free()
+			body.modulate = Color8(255,255,255)
+						
+						
+			
+			
+			
 			
 
 

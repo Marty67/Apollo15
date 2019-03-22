@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Map/Assets/Tiles/PoseidonTiles/Water-back.tres" type="TileSet" id=1]
 [ext_resource path="res://Map/Assets/shaders/Water-shader/water.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Map/Assets/shaders/rain/RainCopy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Character/picydon.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/playerSpawnPoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/door.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -81,7 +82,7 @@ shader_param/velocity = null
 shader_param/intensity = null
 _sections_unfolded = [ "Resource", "shader_param" ]
 
-[node name="Poseidon" type="Node2D"]
+[node name="Poseidon" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -155,11 +156,42 @@ rotation = 3.14159
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Offset", "Transform" ]
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
-[node name="1-1" type="Sprite" parent="background" index="1"]
+[node name="2" type="Sprite" parent="background" index="1"]
+
+modulate = Color( 0.652344, 0.604087, 0.591187, 1 )
+position = Vector2( -5099.18, 207.444 )
+rotation = 3.14159
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Offset", "Transform", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="3" type="Sprite" parent="background" index="2"]
+
+modulate = Color( 0.54808, 0.5625, 0.536133, 1 )
+position = Vector2( -5067.71, 207.059 )
+rotation = 3.14159
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Offset", "Transform", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="1-1" type="Sprite" parent="background" index="3"]
+
+position = Vector2( 1010.46, 370.395 )
+rotation = 3.14159
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Offset", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="1-2" type="Sprite" parent="background" index="4"]
 
 position = Vector2( 944, 368 )
 rotation = 3.14159
@@ -170,32 +202,33 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Top2" type="Sprite" parent="background" index="2"]
+[node name="Top2" type="Sprite" parent="background" index="5"]
 
-position = Vector2( 5778, 3600 )
+position = Vector2( 5796.19, 3599.01 )
+scale = Vector2( 1.7861, 0.971001 )
 texture = ExtResource( 5 )
 
-[node name="Top22" type="Sprite" parent="background" index="3"]
+[node name="Top22" type="Sprite" parent="background" index="6"]
 
 position = Vector2( 5810, 3600 )
 texture = ExtResource( 5 )
 
-[node name="left" type="Sprite" parent="background" index="4"]
+[node name="left" type="Sprite" parent="background" index="7"]
 
 position = Vector2( 5296, -2080 )
 texture = ExtResource( 6 )
 
-[node name="left2" type="Sprite" parent="background" index="5"]
+[node name="left2" type="Sprite" parent="background" index="8"]
 
 position = Vector2( 5296, -2048 )
 texture = ExtResource( 6 )
 
-[node name="left3" type="Sprite" parent="background" index="6"]
+[node name="left3" type="Sprite" parent="background" index="9"]
 
 position = Vector2( -7024, 270 )
 texture = ExtResource( 6 )
 
-[node name="left4" type="Sprite" parent="background" index="7"]
+[node name="left4" type="Sprite" parent="background" index="10"]
 
 position = Vector2( -7024, 302 )
 texture = ExtResource( 6 )
@@ -454,5 +487,33 @@ position = Vector2( 5413.99, -1658.42 )
 [node name="playerSpawnPoint" parent="." index="7" instance=ExtResource( 13 )]
 
 position = Vector2( 926.013, 447.453 )
+
+[node name="playerSpawnPoint2" parent="." index="8" instance=ExtResource( 13 )]
+
+position = Vector2( -5088.31, 255.236 )
+
+[node name="playerSpawnPoint3" parent="." index="9" instance=ExtResource( 13 )]
+
+position = Vector2( 5795.52, 3643.88 )
+
+[node name="passageways" type="Node2D" parent="." index="10"]
+
+[node name="door" parent="passageways" index="0" instance=ExtResource( 14 )]
+
+position = Vector2( -5088.01, 204.026 )
+scale = Vector2( 0.578144, 0.386993 )
+next_map = "res://Map/WorldMaps/PoseidonMap/Cave1.tscn"
+
+[node name="door3" parent="passageways" index="1" instance=ExtResource( 14 )]
+
+position = Vector2( 5797.01, 3598.43 )
+scale = Vector2( 0.873524, 0.471482 )
+next_map = "res://Map/WorldMaps/PoseidonMap/cave3.tscn"
+
+[node name="door2" parent="passageways" index="2" instance=ExtResource( 14 )]
+
+position = Vector2( 927.414, 364.559 )
+scale = Vector2( 1.00477, 0.334037 )
+next_map = "res://Map/WorldMaps/PoseidonMap/cave2.tscn"
 
 

@@ -146,8 +146,14 @@ func normal():
 			
 	
 func add_component():
-	_pickupSFX() #plays a sound effect for picking up a component.
 	components+=1	# this increments the componnet variable, this is called when player picks up a component.
+	
+func get_components():
+	return components
+	
+func reset_components():
+	components = 0	
+		
 	
 	
 func controls_loop():  

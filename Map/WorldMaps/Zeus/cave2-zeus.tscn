@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/playerSpawnPoint.tscn" type="PackedScene" id=5]
 
-[node name="Node2D" type="Node2D"]
+[node name="zeus-cave2" type="Node2D" index="0"]
 
 __meta__ = {
 "_edit_lock_": true
@@ -106,8 +106,7 @@ __meta__ = {
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="3"]
 
-visible = false
-color = Color( 0.141176, 0.141176, 0.168627, 1 )
+color = Color( 0.168627, 0.168627, 0.184314, 1 )
 
 [node name="door" parent="." index="4" instance=ExtResource( 4 )]
 
