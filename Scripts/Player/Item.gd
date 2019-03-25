@@ -3,15 +3,16 @@ extends TextureRect
 var itemIcon
 var itemName
 var itemSlot
-var itemId = 0
+var itemId
 var picked = false
 
-func _init(itemName, itemTexture, itemSlot):
+func _init(itemId,itemName, itemTexture, itemSlot):
 	name = itemName
 	self.itemName = itemName
 	texture = itemTexture
-	hint_tooltip = "Name: %s" % [itemName]
+	hint_tooltip = "Name: %s\n\nitemId: %d" % [itemName, itemId];
 	self.itemSlot = itemSlot
+	self.itemId = itemId
 	mouse_filter = Control.MOUSE_FILTER_PASS
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	

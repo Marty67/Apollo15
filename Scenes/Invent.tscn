@@ -13,7 +13,9 @@ scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 _sections_unfolded = [ "Pause" ]
 
-[node name="Inventory" type="Control" parent="." index="0"]
+[node name="Inventory" type="Control" parent="." index="0" groups=[
+"Persistant",
+]]
 
 pause_mode = 2
 visible = false

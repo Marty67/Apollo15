@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 radius = 220.095
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" index="0"]
 
 position = Vector2( 245.189, 472.154 )
 input_pickable = true

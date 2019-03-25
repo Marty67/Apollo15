@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 26.0475, 10 )
 
-[node name="key" type="Area2D" groups=[
+[node name="key" type="Area2D" index="0" groups=[
 "items",
 ]]
 
@@ -22,6 +22,9 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -30,6 +33,8 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 visible = false
+position = Vector2( 0.264146, 3.22684 )
+scale = Vector2( 2.16592, 4.20533 )
 shape = SubResource( 1 )
 
 

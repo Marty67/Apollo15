@@ -2,14 +2,14 @@ extends Node
 
 
 
-export(String, FILE, "*.tscn") var START  # this allows maploader to setup which scene to first load and can be changes anytime.
+export(String, FILE, "*.tscn") var START  # this allows maploader to setup which scene to first load and can be changed anytime.
 
 
 var map
 var spawned = false
 onready var player = $player #this gets the player node ready for use.
 #onready var interface = $player/Interface
-onready var pause = $Interface # this gets the pause node ready for use.
+onready var pause = $Interface # this gets the interface including pause button and health and oxygen bar ready.
 onready var inventory = $Inventory # this gets the inventory ready for use. 
 
 #var alien = preload("res://Scenes/Character/Heydies.tscn").instance()

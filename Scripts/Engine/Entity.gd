@@ -14,12 +14,13 @@ var spritedir = "down"
 
 var hitstun = 0 
 var health = MAXHEALTH
-var texture_default = null
-var texture_hurt = null
+#var texture_default = null
 
-func _ready():
-	texture_default = $sprite.texture # display normal sprite and animation while walking and idle
-	texture_hurt = load($sprite.texture.get_path().replace(".png","_hurt.png")) # when there is overlapping bodies, should display death animation
+
+
+
+	#texture_default = $sprite.texture # display normal sprite and animation while walking and idle
+	 #get_node("sprite").modulate = Color8(255,255,255) # when there is overlapping bodies, shoulget_node("sprite").modulate = Color8(255,255,255)d display death animation
 
 func movement_loop():
 	var motion
@@ -51,9 +52,11 @@ func damage_loop():
 	
 	if hitstun > 0: # if enemy or player is hit, the texture_hurt is replace with current texture
 		hitstun -= 1	
-		$sprite.texture = texture_hurt
+		#$sprite.texture = texture_hurt
+		get_node("sprite").modulate = Color8(255,0,0)
 	else: # if player is not hit, normal texture is displayed
-		$sprite.texture = texture_default
+		#$sprite.texture = texture_default
+		get_node("sprite").modulate = Color8(255,255,255)
 		if TYPE  == "ENEMY" and health <=0: # if the type of the node is enemy and health has reached 0, death animation for enemy will play
 			var  death_animation = preload("res://Scenes/Character/enemy_death.tscn").instance()
 			var  baguette = preload("res://Items/baguette.tscn").instance() # possible item dropper will be the baguette node

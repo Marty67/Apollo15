@@ -7,7 +7,7 @@
 [ext_resource path="res://Scripts/Player/Oxygen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Character/Health.tscn" type="PackedScene" id=6]
 
-[node name="Interface" type="Control" index="0" groups=[
+[node name="Interface" type="Control" groups=[
 "actors",
 ]]
 
@@ -80,9 +80,7 @@ margin_bottom = 45.5
 
 [node name="Oxygen" parent="." index="1" instance=ExtResource( 5 )]
 
-[node name="Health" parent="." index="2" groups=[
-"Persistant",
-] instance=ExtResource( 6 )]
+[node name="Health" parent="." index="2" instance=ExtResource( 6 )]
 
 [connection signal="health_changed" from="." to="Bars/LifeBar" method="_on_Interface_health_changed"]
 

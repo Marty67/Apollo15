@@ -14,3 +14,9 @@ func _input(event):
 			
 	
 			
+func save():
+	var save_data = {self.get_name():Global.Inventory.save_inv()}
+	return save_data
+
+func load_state(data):
+	Global.Inventory.load_inv(data)

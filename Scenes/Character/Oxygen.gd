@@ -22,6 +22,11 @@ func lose_oxygen(amount): # gradually decrement oxygen level
 	#emit_signal("oxygen_lost",oxygen)
 	
 		
+		
+func load_oxygen(o2):
+	oxygen = o2
+	emit_signal("oxygen_changed", oxygen) 
+	
 func gain_oxygen(amount): # oxygen is incremented by amount in parameter
 	if oxygen + amount > 100:
 		oxygen = 100 # is new oxygen level will be less than 100, set level to 100

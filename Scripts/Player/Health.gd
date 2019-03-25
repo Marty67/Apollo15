@@ -35,6 +35,10 @@ func heal(amount):
 func getHealth():
 	return health
 	
+func load_health(hp):
+	health = hp
+	emit_signal("health_changed", health)
+
 func save():
 	var save_dict = {self.get_name():{
 		"saved_health":self.health,

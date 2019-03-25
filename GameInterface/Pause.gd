@@ -54,7 +54,6 @@ func _on_loadBtn_pressed(): # when load button is pressed from pause menu
 				for n in save_nodes:
 					if k == n.get_name():
 						n.load_state(data[k]) # load the content of the save file to the current game
-						print(data)
 	print("loaded")
 
 

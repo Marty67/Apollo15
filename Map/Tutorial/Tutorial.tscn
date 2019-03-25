@@ -1,9 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Map/Assets/Tiles/BackgroundTile1.tres" type="TileSet" id=1]
+[ext_resource path="res://Map/Assets/Tiles/MVP/BackgroundTile1.tres" type="TileSet" id=1]
 [ext_resource path="res://Map/Tutorial/Map2.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Map/World1/CaveMaps/Map2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Map/WorldMaps/CaveMaps/Map2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Map/Tutorial/Map1.tscn" type="PackedScene" id=4]
+
+
 
 [node name="Node" type="Node"]
 

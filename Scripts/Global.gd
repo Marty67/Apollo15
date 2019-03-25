@@ -15,6 +15,7 @@ var Oxygen
 var Map1
 var Inventory
 var Baguette
+var fireball2
  
 func _ready():  # this function is called once  
 	var musicPlayer = AudioStreamPlayer.new()
