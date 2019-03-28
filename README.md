@@ -42,6 +42,7 @@ Apollo 15 can also be played by running the executable file.
 * [Tiled Maps Editor](https://www.mapeditor.org/) - The editor used to preview tile layouts when designing maps.
 * [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) - Used to design tiles and sprites.
 * [Microsoft Paint](https://support.microsoft.com/en-gb/help/4027344/windows-10-get-microsoft-paint) - Used to design tiles and sprites.
+* [Paint.NET](https://www.getpaint.net/index.html) - Used to design tiles and sprites.
 * [Microsoft Powerpoint](https://products.office.com/en-gb/powerpoint) - Used to create storyboards and cutscenes.
 * [Apple Keynote](https://www.apple.com/keynote/) - Used to create cutscenes.
 * [Apple iMovie](https://www.apple.com/imovie/) - Used to create cutscenes.
