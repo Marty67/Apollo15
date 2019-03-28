@@ -1,6 +1,7 @@
 # Apollo 15
 
 Apollo 15 is a space adventure game created by ten students as part of their Computer Science degree.
+Global warming has increased to a point where oxygen has become scarce on earth. You, the captain of a star-ship, are looking to extract oxygen from planets in the outer reaches of the cosmos. As you near a viable planet, its electromagnetic waves disrupt your ships electronics and causing you to crash-land. You must traverse the planet to find parts and repair your ship, so that you can head back to earth.
 
 ## Getting Started
 
@@ -33,14 +34,17 @@ When in the Godot editor, press [Fn +] F5 to run the project from the initial sc
 
 ## Deployment
 
-Apollo 15 can also be run by executing the .exe file on Windows
+Apollo 15 can also be played by running the executable file.
 
 ## Built With
 
-* [Godot Engine](https://godotengine.org/download/) - The game engine used
-* [Tiled Maps Editor](https://www.mapeditor.org/) - The editor used to preview tile layouts when designing maps
-* [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) - Used to design tiles and sprites
-* [Microsoft Paint](https://support.microsoft.com/en-gb/help/4027344/windows-10-get-microsoft-paint) - Used to design tiles and sprites
+* [Godot Engine](https://godotengine.org/download/) - The game engine used.
+* [Tiled Maps Editor](https://www.mapeditor.org/) - The editor used to preview tile layouts when designing maps.
+* [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) - Used to design tiles and sprites.
+* [Microsoft Paint](https://support.microsoft.com/en-gb/help/4027344/windows-10-get-microsoft-paint) - Used to design tiles and sprites.
+* [Microsoft Powerpoint](https://products.office.com/en-gb/powerpoint) - Used to create storyboards and cutscenes.
+* [Apple Keynote](https://www.apple.com/keynote/) - Used to create cutscenes.
+* [Apple iMovie](https://www.apple.com/imovie/) - Used to create cutscenes.
 
 ## Authors
 
@@ -58,3 +62,10 @@ Apollo 15 can also be run by executing the .exe file on Windows
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* The game design was heavily inspired by games from the GameBoy Advance era, for example, [Pokemon Emerald](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Emerald) and [Zelda: The Minish Cap](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Minish_Cap), as well as the sci-fi movie [Martian](https://en.wikipedia.org/wiki/The_Martian_(film)).
+* With special thanks to the [Godot subreddit](https://www.reddit.com/r/godot), the [Godot Docs](https://docs.godotengine.org/en/3.0/getting_started/step_by_step/intro_to_the_editor_interface.html) and the [Godot FAQ](https://github.com/godotengine/godot-docs/blob/master/about/faq.rst) for providing key information that allowed us to make this game possible.
+* Thanks to [Oen44](https://github.com/Oen44) for their [Godot Inventory system](https://github.com/Oen44/Godot-Inventory) and [GDQuest](https://www.youtube.com/channel/UCxboW7x0jZqFdvMdCFKTMsQ) for his helpful tutorials.
+
