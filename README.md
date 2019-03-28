@@ -5,7 +5,7 @@ Global warming has increased to a point where oxygen has become scarce on earth.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -32,7 +32,7 @@ Or:
 When in the Godot editor, press [Fn +] F5 to run the project from the initial scene, or if you want to run a specific scene, open it and press [Fn +] F6
 ```
 
-## Deployment
+### Executing
 
 Apollo 15 can also be played by running the executable file.
 
