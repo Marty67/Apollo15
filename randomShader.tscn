@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+void fragment()
+{
+vec2 q = (-vec2(1920,1080) + 2.0*FRAGCOORD.xy) / 360.0;
+vec2 p = q;
+
+p += 0.2*cos( 1.5*p.yx + 1.0*TIME + vec2(0.1,1.1) );
+p += 0.2*cos( 2.4*p.yx + 1.6*TIME + vec2(4.5,2.6) );
+p += 0.2*cos( 3.3*p.yx + 1.2*TIME + vec2(3.2,3.4) );
+p += 0.2*cos( 4.2*p.yx + 1.7*TIME + vec2(1.8,5.2) );
+p += 0.2*cos( 9.1*p.yx + 1.1*TIME + vec2(6.3,3.9) );
+
+float r = length( p );
+
+vec3 col1 = texture( SCREEN_TEXTURE, vec2(r,     0.0), 0.0 ).zyx;
+vec3 col2 = texture( SCREEN_TEXTURE, vec2(r+0.04,0.0), 0.0 ).zyx;
+
+vec3 col = col1;
+col += 0.1;
+col *= 1.0 + 0.4*sin(r+vec3(0.0,3.0,3.0));
+col -= 4.0*max(vec3(0.0),col1-col2).x;
+col += 1.0*max(vec3(0.0),col2-col1).x - 0.1;
+col *= 1.7 - 0.5*length(q);
+
+COLOR = vec4( col, 1.0 );    
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="icon" type="Sprite" parent="." index="0"]
+
+material = SubResource( 2 )
+position = Vector2( 500.603, 292.995 )
+scale = Vector2( 6.16123, 5.92055 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
+
+

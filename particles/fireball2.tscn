@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://particles/fireball2.gd" type="Script" id=1]
+[ext_resource path="res://particles/Fire2.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 220.095
+
+[node name="Area2D" type="Area2D"]
+
+position = Vector2( 245.189, 472.154 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( -3.85752, -3.02104 )
+scale = Vector2( 0.193769, 0.17197 )
+shape = SubResource( 1 )
+
+[node name="Fire" parent="." index="1" instance=ExtResource( 2 )]
+
+use_parent_material = false
+position = Vector2( -4.2796, -3.42078 )
+
+[node name="burnTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = false
+
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+
+[connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
+
+[connection signal="timeout" from="burnTimer" to="." method="_on_burnTimer_timeout"]
+
+

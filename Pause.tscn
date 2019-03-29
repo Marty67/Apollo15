@@ -1,0 +1,236 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://GameInterface/Pause.gd" type="Script" id=1]
+[ext_resource path="res://Main Menu Resources/Button Textures/Resume - Unsel.png" type="Texture" id=2]
+[ext_resource path="res://Main Menu Resources/Button Textures/Resume - Sel (2).png" type="Texture" id=3]
+[ext_resource path="res://Main Menu Resources/Button Textures/Save Game Unsel.png" type="Texture" id=4]
+[ext_resource path="res://Main Menu Resources/Button Textures/Save Game - Sel.png" type="Texture" id=5]
+[ext_resource path="res://Main Menu Resources/Button Textures/Load Game - Unsel.png" type="Texture" id=6]
+[ext_resource path="res://Main Menu Resources/Button Textures/Load Game - Sel.png" type="Texture" id=7]
+[ext_resource path="res://Main Menu Resources/Button Textures/Main Menu - UnSel.png" type="Texture" id=8]
+[ext_resource path="res://Main Menu Resources/Button Textures/Main Menu - Selected.png" type="Texture" id=9]
+[ext_resource path="res://title_screen/fonts/bebas_36.tres" type="DynamicFont" id=10]
+[ext_resource path="res://GameInterface/Interface.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Images/arcade-font-writer.png" type="Texture" id=12]
+[ext_resource path="res://Images/start.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+layer = 100
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="UI" type="Control" parent="." index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 961.0
+margin_bottom = 542.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="Overlay" type="ColorRect" parent="UI" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -4.0
+margin_right = 13.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0.558039 )
+
+[node name="resumeBtn" type="TextureButton" parent="UI/Overlay" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 881.0
+margin_top = 416.0
+margin_right = 1073.0
+margin_bottom = 448.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+texture_focused = ExtResource( 3 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="saveBtn" type="TextureButton" parent="UI/Overlay" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 837.0
+margin_top = 498.0
+margin_right = 1125.0
+margin_bottom = 530.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+texture_focused = ExtResource( 5 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="loadBtn" type="TextureButton" parent="UI/Overlay" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 834.0
+margin_top = 587.0
+margin_right = 1122.0
+margin_bottom = 619.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+texture_focused = ExtResource( 7 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="menuBtn" type="TextureButton" parent="UI/Overlay" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 834.0
+margin_top = 676.0
+margin_right = 1122.0
+margin_bottom = 708.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+texture_focused = ExtResource( 9 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="pauseBtn" type="Button" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1861.0
+margin_top = -1.0
+margin_right = 1893.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 10 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "I I"
+flat = false
+align = 1
+_sections_unfolded = [ "Visibility", "custom_fonts", "custom_styles" ]
+
+[node name="Interface" parent="." index="2" instance=ExtResource( 11 )]
+
+margin_left = -109.0
+margin_top = -10.0
+margin_right = -939.0
+margin_bottom = -672.0
+
+[node name="complete" type="Sprite" parent="." index="3"]
+
+visible = false
+position = Vector2( 997.82, 213.327 )
+texture = ExtResource( 12 )
+
+[node name="start" type="Sprite" parent="." index="4"]
+
+visible = false
+position = Vector2( 988.28, 173.7 )
+scale = Vector2( 0.708543, 2.30585 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[connection signal="pressed" from="UI/Overlay/resumeBtn" to="UI" method="_on_resumeBtn_pressed"]
+
+[connection signal="pressed" from="UI/Overlay/saveBtn" to="UI" method="_on_saveBtn_pressed"]
+
+[connection signal="pressed" from="UI/Overlay/loadBtn" to="UI" method="_on_loadBtn_pressed"]
+
+[connection signal="pressed" from="UI/Overlay/menuBtn" to="UI" method="_on_menuBtn_pressed"]
+
+[connection signal="pressed" from="pauseBtn" to="UI" method="_on_pauseBtn_pressed"]
+
+

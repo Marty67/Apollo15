@@ -1,0 +1,57 @@
+extends Area2D
+
+signal player_entered(next_map)
+
+
+
+export(String, FILE, "*.tscn") var next_map
+var player = preload("res://Scenes/Character/attack2.tscn")
+
+
+export(bool) var ACTIVE_AT_START = false
+
+func _ready():
+	set_active(ACTIVE_AT_START)
+	assert next_map !=""
+	
+
+		
+#func _on_body_entered(body):
+#	if body.name == "player":
+#		print("player detected")
+#		emit_signal("player_entered", next_map)
+		
+	    
+		
+		
+		
+		
+		
+		
+		
+	
+	
+
+	
+func set_active(value):
+	visible = value
+	$CollisionShape2D.disabled = not value
+	
+	
+				
+func _physics_process(delta):
+	
+	if Global.Player.check_components() == true:
+		ACTIVE_AT_START = true
+		set_active(ACTIVE_AT_START)
+		
+	
+	
+	var bodies = get_overlapping_bodies()
+	for body in bodies:
+		if body.name == "player":
+			#$cut/travel.show()
+			emit_signal("player_entered", next_map)
+
+
+

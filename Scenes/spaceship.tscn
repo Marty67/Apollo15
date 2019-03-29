@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Images/Spaceship.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Spaceship" type="Sprite" parent="." index="0"]
+
+position = Vector2( 998.396, 602.592 )
+scale = Vector2( 0.207696, 0.340372 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Spaceship" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spaceship/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 352.011, 2.37915, 750.638, 186.438, 810.099, 105.497, 430.458, -154.072, 778.082, -137.325, 892.431, -187.565, 563.103, -235.013, 494.493, -279.67, 471.623, -279.67, 553.956, -346.655, 540.233, -391.312, 398.439, -355.028, 293.237, -357.819, 169.74, -335.491, 142.296, -355.028, 293.237, -402.477, 302.386, -435.969, 183.461, -424.805, 128.573, -410.85, 69.1118, -382.939, -214.477, -489, -319.679, -463.88, -342.548, -469.462, -49.8125, -285.252, -90.9785, -237.804, -264.791, -246.177, -351.696, -204.311, -209.902, -193.147, -822.818, 105.497, -863.984, 172.483, -722.19, 205.976, -603.266, 161.318, 78.2593, -70.3398 )
+
+
