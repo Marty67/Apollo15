@@ -36,6 +36,11 @@ When in the Godot editor, press [Fn +] F5 to run the project from the initial sc
 
 Apollo 15 can also be played by running the executable file.
 
+## Downloads
+
+* [Full Source Code](https://www.filehosting.org/file/details/790304/Apollo15_source.zip) - Some files are too large to host on Github
+* [Executable Game](https://www.filehosting.org/file/details/790297/Apollo15.zip)
+
 ## Built With
 
 * [Godot Engine](https://godotengine.org/download/) - The game engine used.
